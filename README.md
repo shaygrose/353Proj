@@ -1,4 +1,4 @@
 # 353Proj
-Dog Breed Classification
+Movie Rating Analysis
 
-To download Stanford data containing all dog images run setup/setup.sh script (downloads ~1GB of data)
+Using IMDb and Rotten Tomatoes datasets to find out characteristics of movies which are succesful at the box office.
