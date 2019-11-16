@@ -2,27 +2,48 @@ import pandas as pd
 import sys
 
 
-imdb = pd.read_csv(sys.argv[1])
-metadata = pd.read_csv(sys.argv[2])
-movie = pd.read_csv(sys.argv[3])
-rotten = pd.read_csv(sys.argv[4])
-
-#COMMON FIELDS
-#genre, director, year, length, title, rating (imdb_score, rating, imdb_rating,), actors (maybe top 3)
-
-#only movie_metadata and IMDB have box office gross, movies has top200boxoffice boolean column, rotten tomatoes has nothing
+# has all actors in single columns as list
+imdb = pd.read_csv(sys.argv[1], usecols = ['Title','Genre', 'Year', 'Runtime (Minutes)', 'Rating', 'Director', 'Actors', 'Revenue (Millions)'])
+#reorder columns
+imdb = imdb[['Title','Genre', 'Year', 'Runtime (Minutes)', 'Rating', 'Director', 'Actors', 'Revenue (Millions)']]
+imdb.columns = imdb.columns.str.lower()
+#rename columns for consistency
+imdb = imdb.rename(columns = {'runtime (minutes)': 'runtime', 'revenue (millions)': 'gross'})
 
 
+#need to convert meta data gross into millions (right now its just long number like 333,333,333)
+#also need to decide if we want to have actors as one columns with a list of 3 actors, or 3 separate columns with one actor each
+metadata = pd.read_csv(sys.argv[2], usecols = ['movie_title', 'genres', 'title_year', 'duration', 'imdb_score', 'director_name', 'actor_1_name', 'actor_2_name', 'actor_3_name', 'gross'])
+#reorders columns
+metadata = metadata[['movie_title', 'genres', 'title_year', 'duration', 'imdb_score', 'director_name', 'actor_1_name', 'actor_2_name', 'actor_3_name', 'gross']]
+#rename columns
+metadata = metadata.rename(columns = {'movie_title': 'title', 'genres': 'genre', 'title_year': 'year', 'duration':'runtime', 'imdb_score':'rating', 'director_name':'director', 'actor_1_name':'actor1', 'actor_2_name':'actor2', 'actor_3_name':'actor3'})
 
-#movie_metadata (3 actors listed)
-#director_name,num_critic_for_reviews,duration,director_facebook_likes,actor_3_facebook_likes,actor_2_name,actor_1_facebook_likes,gross,genres,actor_1_name,movie_title,num_voted_users,cast_total_facebook_likes,actor_3_name,facenumber_in_poster,plot_keywords,movie_imdb_link,num_user_for_reviews,language,country,content_rating,budget,title_year,actor_2_facebook_likes,imdb_score,aspect_ratio,movie_facebook_likes
 
-#movies (5 actors listed)
-#title,title_type,genre,runtime,mpaa_rating,studio,thtr_rel_year,thtr_rel_month,thtr_rel_day,dvd_rel_year,dvd_rel_month,dvd_rel_day,imdb_rating,imdb_num_votes,critics_rating,critics_score,audience_rating,audience_score,best_pic_nom,best_pic_win,best_actor_win,best_actress_win,best_dir_win,top200_box,director,actor1,actor2,actor3,actor4,actor5,imdb_url,rt_url
+#doesn't have box office gross
+movie = pd.read_csv(sys.argv[3], usecols = ['title', 'genre', 'thtr_rel_year', 'runtime', 'imdb_rating', 'director', 'actor1', 'actor2', 'actor3', 'actor4', 'actor5'])
+#reorder columns
+movie = movie[['title', 'genre', 'thtr_rel_year', 'runtime', 'imdb_rating', 'director', 'actor1', 'actor2', 'actor3', 'actor4', 'actor5']]
+#rename columns
+movie = movie.rename(columns = {'thtr_rel_year': 'year', 'imdb_rating': 'rating'})
+
 
 #rotten tomatoes, doesn't have much useful data, but could possibly join it to one of the other dataframes on common movie titles
-#has 6 actors listed
-#Cast 1,Cast 2,Cast 3,Cast 4,Cast 5,Cast 6,Description,Director 1,Director 2,Director 3,Genre,Rating(pg-13 etc),Release Date,Runtime,Studio,Title,Writer 1,Writer 2,Writer 3,Writer 4,Year
+rotten = pd.read_csv(sys.argv[4], usecols = ['Title', 'Genre', 'Year', 'Runtime', 'Director 1', 'Cast 1', 'Cast 2', 'Cast 3', 'Cast 4', 'Cast 5', 'Cast 6'])
+#reorder columns
+rotten = rotten[['Title', 'Genre', 'Year', 'Runtime', 'Director 1', 'Cast 1', 'Cast 2', 'Cast 3', 'Cast 4', 'Cast 5', 'Cast 6']]
+#rename columns
+rotten.columns = rotten.columns.str.lower()
+rotten = rotten.rename(columns = {'director 1': 'director', 'cast 1': 'actor1', 'cast 2': 'actor2', 'cast 3': 'actor3', 'cast 4': 'actor4', 'cast 5': 'actor5', 'cast 6': 'actor6'})
 
-#IMDB (actors field holds list of ~4 actors)
-#Rank,Title,Genre,Description,Director,Actors,Year,Runtime (Minutes),Rating,Votes,Revenue (Millions),Metascore
+print(imdb.head())
+print(metadata.head())
+print(movie.head())
+print(rotten.head())
+
+
+
+
+
+
+
