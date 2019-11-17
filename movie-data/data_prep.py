@@ -22,11 +22,11 @@ def get_runtime(runtime):
 # has genres as list separated by comma (ex. Action,Adventure,Fantasy)
 imdb = pd.read_csv(sys.argv[1], usecols = ['Title','Genre', 'Year', 'Runtime (Minutes)', 'Rating', 'Director', 'Actors', 'Revenue (Millions)'])
 #reorder columns
-imdb = imdb[['Title','Genre', 'Year', 'Runtime (Minutes)', 'Rating', 'Director', 'Actors', 'Revenue (Millions)']]
-imdb.columns = imdb.columns.str.lower()
-imdb[['actor1', 'actor2', 'actor3', 'actor4']] = imdb.actors.str.split(',', expand=True)
+imdb[['actor1', 'actor2', 'actor3', 'actor4']] = imdb.Actors.str.split(',', expand=True)
 #include only 3 actors
-imdb = imdb.drop(['actors', 'actor4'], axis = 1)
+imdb = imdb.drop(['Actors', 'actor4'], axis = 1)
+imdb = imdb[['Title','Genre', 'Year', 'Runtime (Minutes)', 'Rating', 'Director', 'actor1', 'actor2', 'actor3', 'Revenue (Millions)']]
+imdb.columns = imdb.columns.str.lower()
 #rename columns for consistency
 imdb = imdb.rename(columns = {'runtime (minutes)': 'runtime', 'revenue (millions)': 'gross'})
 imdb = imdb.dropna()
@@ -65,6 +65,11 @@ movie = movie.astype({'year': 'int32', 'runtime':'int32'})
 movie = movie.drop(['actor4', 'actor5'], axis = 1)
 
 
+rotten_ratings = pd.read_csv(sys.argv[5], sep = '\t', usecols = ['Movie', 'Rating'])
+rotten_ratings.columns = rotten_ratings.columns.str.lower()
+rotten_ratings = rotten_ratings.rename(columns = {'movie': 'title'})
+rotten_ratings['rating'] = rotten_ratings['rating']/10
+#print(rotten_ratings.head())
 
 # ROTTEN TOMATOES 
 #doesn't have much useful data, but could possibly join it to one of the other dataframes on common movie titles
@@ -82,19 +87,46 @@ rotten['runtime'] = rotten['runtime'].apply(get_runtime)
 #include only 3 actors
 rotten = rotten.drop(['actor4', 'actor5', 'actor6'], axis = 1)
 
+
+
+
+
+both_rotten = pd.merge(rotten, rotten_ratings, on = 'title')
+
+both_rotten = both_rotten.groupby(['title', 'year', 'runtime', 'director', 'actor1', 'actor2', 'actor3', 'rating']).genre.unique().reset_index()
+
+both_rotten = both_rotten[['title', 'genre', 'year', 'runtime',  'rating', 'director', 'actor1', 'actor2', 'actor3']]
+
+
+
+both_rotten['genre'] = both_rotten['genre'].apply(', '.join)
+print(both_rotten.head())
+
+
+
+
 #Display
-print(imdb.head())
+#print(imdb.head())
 #print(len(imdb.index)) #872 rows
-print(metadata.head())
+#print(metadata.head())
 #print(len(metadata.index)) #4141 rows
-print(movie.head())
+#print(movie.head())
 #print(len(movie.index)) #634 rows
-print(rotten.head())
+#print(rotten.head())
 #print(len(rotten.index)) #29284 rows
 
 
+#not including rotten tomatoes
+joined = pd.concat([imdb, metadata, movie, both_rotten], sort=False)
+#print(joined.head())
+#print(len(joined.index)) #5750 rows
 
-
-
+# joined = joined['title'].value_counts()
+# print(joined) #5570
+joined= joined.drop_duplicates(subset='title', keep='first')
+joined = joined.sort_values(by=['title'])
+#print(joined)
+#print(joined['title'].value_counts())
+joined.to_csv('all.csv')
 
 
