@@ -25,7 +25,7 @@
 4975,20 Dates,"Biography,Comedy,Romance",1998,1990,87,5.3,Myles Berkowitz,Tia Carrere,Tom Ardavany,Robert McKee
 4562,20 Feet from Stardom,"Documentary,Music",2013,2010,91,7.4,Morgan Neville,Sheryl Crow,Lou Adler,Merry Clayton
 3612,200 Cigarettes,"Comedy,Drama,Romance",1999,1990,101,5.9,Risa Bramon Garcia,Janeane Garofalo,Dave Chappelle,Gaby Hoffmann
-3079,2001: A Space Odyssey,"Adventure,Mystery,Sci-Fi",1968,1960,161,8.3,Stanley Kubrick,Keir Dullea,Gary Lockwood,Glenn Beck
+3079,2001: A Space Odyssey,"Adventure,Mystery,Sci-Fi",1968,1920-1960,161,8.3,Stanley Kubrick,Keir Dullea,Gary Lockwood,Glenn Beck
 472,2012,"Action,Adventure,Sci-Fi",2009,2000,158,5.8,Roland Emmerich,John Cusack, Thandie Newton, Chiwetel Ejiofor
 4181,2016: Obama's America,Documentary,2012,2010,87,5.1,Dinesh D'Souza,Barack Obama,Zackary Steven Graham,Dinesh D'Souza
 2995,2046,"Drama,Romance,Sci-Fi",2004,2000,129,7.5,Kar-Wai Wong,Li Gong,Tony Chiu Wai Leung,Maggie Cheung
@@ -58,7 +58,7 @@
 4640,"4 Months, 3 Weeks and 2 Days",Drama,2007,2000,113,7.9,Cristian Mungiu,Anamaria Marinca,Vlad Ivanov,Alexandru Potocean
 2498,40 Days and 40 Nights,"Comedy,Romance",2002,2000,96,5.6,Michael Lehmann,Emmanuelle Vaugier,Vinessa Shaw,Paulo Costanzo
 849,42,"Biography,Drama,Sport",2013,2010,128,7.5,Brian Helgeland,Chadwick Boseman, T.R. Knight, Harrison Ford
-4786,42nd Street,"Comedy,Musical,Romance",1933,1930,89,7.7,Lloyd Bacon,Ginger Rogers,Dick Powell,George Brent
+4786,42nd Street,"Comedy,Musical,Romance",1933,1920-1960,89,7.7,Lloyd Bacon,Ginger Rogers,Dick Powell,George Brent
 85,47 Ronin,"Action,Adventure,Drama,Fantasy",2013,2010,128,6.3,Carl Rinsch,Keanu Reeves,Cary-Hiroyuki Tagawa,Jin Akanishi
 357,49 Up,Documentary,2006,2000,180,8.2,Michael Apted,Bruce Balden,Jacqueline Bassett,Symon Basterfield
 3013,5 Days of War,"Action,Drama,War",2011,2010,113,5.6,Renny Harlin,Richard Coyle,Kenneth Cranham,Ana Imnadze
@@ -89,13 +89,13 @@
 2310,A Dangerous Method,"Biography,Drama,Thriller",2011,2010,99,6.5,David Cronenberg,Michael Fassbender,Viggo Mortensen,Sarah Gadon
 3513,A Dog of Flanders,"Drama,Family",1999,1990,100,6.3,Kevin Brodie,Bruce McGill,Cheryl Ladd,Jack Warden
 1524,A Few Good Men,"Drama,Thriller",1992,1990,138,7.6,Rob Reiner,Tom Cruise,Demi Moore,Kevin Pollak
-4897,A Fistful of Dollars,"Action,Drama,Western",1964,1960,99,8.0,Sergio Leone,Clint Eastwood,Gian Maria Volontè,Aldo Sambrell
+4897,A Fistful of Dollars,"Action,Drama,Western",1964,1920-1960,99,8.0,Sergio Leone,Clint Eastwood,Gian Maria Volontè,Aldo Sambrell
 347,A Good Day to Die Hard,"Action,Thriller",2013,2010,101,5.3,John Moore,Bruce Willis,Cole Hauser,Megalyn Echikunwoke
 127,A Good Old Fashioned Orgy,Comedy,2011,2010,95,6.2,Alex Gregory,Jason Sudeikis,Leslie Bibb,Lake Bell
 189,A Good Woman,Drama,2006,2000,93,6.5,Mike Barker,Helen Hunt,Scarlett Johansson,Tom Wilkinson
 530,A Good Year,"Comedy,Drama,Romance",2006,2000,117,6.9,Ridley Scott,Russell Crowe, Abbie Cornish, Albert Finney
 2263,A Guy Thing,"Comedy,Romance",2003,2000,101,5.6,Chris Koch,Thomas Lennon,Lochlyn Munro,James Brolin
-4719,A Hard Day's Night,"Comedy,Musical",1964,1960,87,7.7,Richard Lester,Paul McCartney,Ringo Starr,George Harrison
+4719,A Hard Day's Night,"Comedy,Musical",1964,1920-1960,87,7.7,Richard Lester,Paul McCartney,Ringo Starr,George Harrison
 4180,A Haunted House,"Comedy,Fantasy",2013,2010,86,5.1,Michael Tiddes,Essence Atkins,Alanna Ubach,J.B. Smoove
 3917,A Haunted House 2,"Comedy,Fantasy",2014,2010,86,4.7,Michael Tiddes,Ashley Rickards,Essence Atkins,Gabriel Iglesias
 1558,A History of Violence,"Crime,Drama,Thriller",2005,2000,96,7.5,David Cronenberg,Viggo Mortensen,Kyle Schmid,William Hurt
@@ -293,7 +293,7 @@
 553,Anna and the King,"Drama,History,Romance",1999,1990,148,6.7,Andy Tennant,Bai Ling,Geoffrey Palmer,Randall Duk Kim
 818,Annabelle,"Horror,Mystery,Thriller",2014,2010,99,5.4,John R. Leonetti,Ward Horton, Annabelle Wallis, Alfre Woodard
 981,Annie,"Comedy,Drama,Family",2014,2010,118,5.3,Will Gluck,Quvenzhané Wallis, Cameron Diaz, Jamie Foxx
-3974,Annie Get Your Gun,"Biography,Comedy,Musical,Romance,Western",1950,1950,107,7.0,George Sidney,Keenan Wynn,Howard Keel,Betty Hutton
+3974,Annie Get Your Gun,"Biography,Comedy,Musical,Romance,Western",1950,1920-1960,107,7.0,George Sidney,Keenan Wynn,Howard Keel,Betty Hutton
 3889,Annie Hall,"Comedy,Romance",1977,1970,93,8.1,Woody Allen,Woody Allen,Carol Kane,Shelley Duvall
 3398,Anomalisa,"Animation,Comedy,Drama,Romance",2015,2010,90,7.3,Duke Johnson,Jennifer Jason Leigh,Tom Noonan,David Thewlis
 1814,Anonymous,"Drama,History,Thriller",2011,2010,130,6.9,Roland Emmerich,Vanessa Redgrave,Joely Richardson,Rafe Spall
@@ -393,7 +393,7 @@
 630,Bait,Drama,2000,2000,119,5.7,Antoine Fuqua,Jamie Foxx,David Morse,Robert Pastorelli
 621,Ballistic: Ecks vs. Sever,"Action,Crime,Sci-Fi,Thriller",2002,2000,91,3.6,Wych Kaosayananda,Talisa Soto,Sandrine Holt,Gregg Henry
 6,Balls of Fury,"Action, Comedy",2007,2000,90,3.2,Robert Ben Garant,Dan Fogler,Christopher Walken,George Lopez
-4647,Bambi,"Animation,Drama,Family",1942,1940,70,7.4,James Algar,Sam Edwards,Donnie Dunagan,Ann Gillis
+4647,Bambi,"Animation,Drama,Family",1942,1920-1960,70,7.4,James Algar,Sam Edwards,Donnie Dunagan,Ann Gillis
 3198,Bamboozled,"Comedy,Drama,Music",2000,2000,135,6.5,Spike Lee,Gillian White,Michael Rapaport,Jada Pinkett Smith
 551,Bandits,"Comedy,Crime,Drama,Romance",2001,2000,123,6.6,Barry Levinson,Bruce Willis,Brían F. O'Byrne,Azura Skye
 2314,Bandslam,"Comedy,Drama,Family,Music,Romance",2009,2000,111,6.4,Todd Graff,Scott Porter,Charlie Saxton,Ryan Donowho
@@ -640,7 +640,7 @@
 646,Burnt,"Comedy,Drama",2015,2010,101,6.6,John Wells,Bradley Cooper, Sienna Miller, Daniel Brühl
 290,Busanhaeng,"Action,Drama,Horror",2016,2010,118,7.5,Sang-ho Yeon,Yoo Gong, Soo-an Kim, Yu-mi Jung
 4494,But I'm a Cheerleader,"Comedy,Drama",1999,1990,85,6.6,Jamie Babbit,Natasha Lyonne,Clea DuVall,Eddie Cibrian
-3584,Butch Cassidy and the Sundance Kid,"Biography,Crime,Drama,Western",1969,1960,110,8.1,George Roy Hill,Katharine Ross,Ted Cassidy,Kenneth Mars
+3584,Butch Cassidy and the Sundance Kid,"Biography,Crime,Drama,Western",1969,1920-1960,110,8.1,George Roy Hill,Katharine Ross,Ted Cassidy,Kenneth Mars
 2333,By the Sea,"Drama,Romance",2015,2010,122,5.3,Angelina Jolie Pitt,Brad Pitt,Angelina Jolie Pitt,Melvil Poupaud
 2338,CJ7,"Comedy,Family,Sci-Fi",2008,2000,86,6.5,Stephen Chow,Jiao Xu,Yuqi Zhang,Chi Chung Lam
 3533,Ca$h,"Comedy,Crime,Thriller",2010,2010,118,6.0,Stephen Milburn Anderson,Chris Hemsworth,Mike Starr,Paul Sanchez
@@ -764,7 +764,7 @@
 3402,Clay Pigeons,"Comedy,Crime",1998,1990,104,6.6,David Dobkin,Janeane Garofalo,Vince Vieluf,Kevin Rahm
 5026,Clean,"Drama,Music,Romance",2004,2000,110,6.9,Olivier Assayas,Maggie Cheung,Béatrice Dalle,Don McKellar
 699,Clear and Present Danger,"Action,Crime,Drama,Thriller",1994,1990,141,6.9,Phillip Noyce,Harrison Ford,Dean Jones,Raymond Cruz
-1160,Cleopatra,"Biography,Drama,History,Romance",1963,1960,251,7.0,Joseph L. Mankiewicz,Martin Landau,Richard Burton,Roddy McDowall
+1160,Cleopatra,"Biography,Drama,History,Romance",1963,1920-1960,251,7.0,Joseph L. Mankiewicz,Martin Landau,Richard Burton,Roddy McDowall
 5008,Clerks,Comedy,1994,1990,102,7.8,Kevin Smith,Jason Mewes,Brian O'Halloran,Jeff Anderson
 3718,Clerks II,Comedy,2006,2000,97,7.4,Kevin Smith,Ethan Suplee,Jason Mewes,Brian O'Halloran
 429,Click,"Comedy,Drama,Fantasy,Romance",2006,2000,107,6.4,Frank Coraci,Adam Sandler,Cameron Monaghan,Julie Kavner
@@ -1001,7 +1001,7 @@
 3680,Do the Right Thing,Drama,1989,1980,120,7.9,Spike Lee,Ruby Dee,John Savage,Danny Aiello
 580,Doctor Dolittle,"Comedy,Family,Fantasy",1998,1990,85,5.3,Betty Thomas,Oliver Platt,Raven-Symoné,Peter Boyle
 37,Doctor Strange,"Action,Adventure,Fantasy",2016,2010,115,7.6,Scott Derrickson,Benedict Cumberbatch, Chiwetel Ejiofor, Rachel McAdams
-3026,Doctor Zhivago,"Drama,Romance,War",1965,1960,200,8.0,David Lean,Julie Christie,Klaus Kinski,Geraldine Chaplin
+3026,Doctor Zhivago,"Drama,Romance,War",1965,1920-1960,200,8.0,David Lean,Julie Christie,Klaus Kinski,Geraldine Chaplin
 1595,Dodgeball: A True Underdog Story,"Comedy,Sport",2004,2000,92,6.7,Rawson Marshall Thurber,Gary Cole,Stephen Root,Joel David Moore
 311,Dog Park,Comedy,1998,1990,91,5.1,Bruce McCulloch,Natasha Henstridge,Janeane Garofalo,Luke Wilson
 3120,Dogma,"Adventure,Comedy,Drama,Fantasy",1999,1990,130,7.4,Kevin Smith,Matt Damon,Janeane Garofalo,George Carlin
@@ -1037,7 +1037,7 @@
 3289,Down to You,"Comedy,Drama,Romance",2000,2000,91,4.9,Kris Isacsson,Rosario Dawson,Lauren German,Shawn Hatosy
 2829,Downfall,"Biography,Drama,History,War",2004,2000,178,8.3,Oliver Hirschbiegel,Thomas Kretschmann,Bruno Ganz,Alexandra Maria Lara
 572,Dr. Dolittle 2,"Comedy,Family,Fantasy",2001,2000,87,4.6,Steve Carr,Raven-Symoné,Jeffrey Jones,Kevin Pollak
-4537,Dr. No,"Action,Adventure,Thriller",1962,1960,110,7.3,Terence Young,Ursula Andress,Jack Lord,Lois Maxwell
+4537,Dr. No,"Action,Adventure,Thriller",1962,1920-1960,110,7.3,Terence Young,Ursula Andress,Jack Lord,Lois Maxwell
 1774,Dracula 2000,"Action,Fantasy,Horror,Thriller",2000,2000,99,4.9,Patrick Lussier,Gerard Butler,Danny Masterson,Jeri Ryan
 557,Dracula Untold,"Action,Drama,Fantasy",2014,2010,92,6.3,Gary Shore,Luke Evans, Dominic Cooper, Sarah Gadon
 4520,Dracula: Pages from a Virgin's Diary,"Comedy,Horror,Musical",2002,2000,73,7.0,Guy Maddin,Sarah Murphy-Dyson,CindyMarie Small,Brent Neale
@@ -1073,7 +1073,7 @@
 2841,"Dude, Where's My Car?","Comedy,Mystery",2000,2000,83,5.5,Danny Leiner,Jennifer Garner,Mary Lynn Rajskub,Marla Sokoloff
 2115,Dudley Do-Right,"Comedy,Family,Romance",1999,1990,77,3.8,Hugh Wilson,Brendan Fraser,Alex Rocco,Eric Idle
 662,Due Date,"Comedy,Drama",2010,2010,95,6.6,Todd Phillips,Robert Downey Jr.,RZA,Matt Walsh
-3596,Duel in the Sun,"Drama,Romance,Western",1946,1940,144,6.9,King Vidor,Joseph Cotten,Lillian Gish,Jennifer Jones
+3596,Duel in the Sun,"Drama,Romance,Western",1946,1920-1960,144,6.9,King Vidor,Joseph Cotten,Lillian Gish,Jennifer Jones
 2576,Duets,"Comedy,Drama,Music",2000,2000,112,6.0,Bruce Paltrow,Lochlyn Munro,Marian Seldes,Huey Lewis
 3695,Dum Maaro Dum,"Action,Crime,Drama,Thriller",2011,2010,128,6.2,Rohan Sippy,Abhishek Bachchan,Bipasha Basu,Prateik
 2997,Duma,"Adventure,Drama,Family",2005,2000,100,7.3,Carroll Ballard,Eamonn Walker,Hope Davis,Campbell Scott
@@ -1331,7 +1331,7 @@
 1096,From Hell,"Horror,Mystery,Thriller",2001,2000,122,6.8,Albert Hughes,Johnny Depp,Jason Flemyng,Ian Richardson
 2983,From Justin to Kelly,"Comedy,Musical,Romance",2003,2000,90,2.1,Robert Iscove,Anika Noni Rose,Kelly Clarkson,Brian Dietzen
 921,From Paris with Love,"Action,Thriller",2010,2010,92,6.5,Pierre Morel,Kasia Smutniak,Amber Rose Revah,Rebecca Dayan
-4247,From Russia with Love,"Action,Adventure,Thriller",1963,1960,115,7.5,Terence Young,Robert Shaw,Daniela Bianchi,Lois Maxwell
+4247,From Russia with Love,"Action,Adventure,Thriller",1963,1920-1960,115,7.5,Terence Young,Robert Shaw,Daniela Bianchi,Lois Maxwell
 4518,From a Whisper to a Scream,"Action,Drama,Horror,Thriller",1987,1980,92,5.9,Jeff Burr,Terry Kiser,Clu Gulager,Susan Tyrrell
 1739,Frost/Nixon,Drama,2008,2000,122,7.7,Ron Howard,Toby Jones,Clint Howard,Oliver Platt
 174,Frozen,"Animation,Adventure,Comedy",2013,2010,102,7.5,Chris Buck,Kristen Bell, Idina Menzel, Jonathan Groff
@@ -1421,11 +1421,11 @@
 915,Goksung,"Drama,Fantasy,Horror",2016,2010,156,7.5,Hong-jin Na,Jun Kunimura, Jung-min Hwang, Do-won Kwak
 20,Gold,"Adventure,Drama,Thriller",2016,2010,120,6.7,Stephen Gaghan,Matthew McConaughey, Edgar Ramírez, Bryce Dallas Howard
 717,GoldenEye,"Action,Adventure,Thriller",1995,1990,130,7.2,Martin Campbell,Izabella Scorupco,Joe Don Baker,Tchéky Karyo
-4047,Goldfinger,"Action,Adventure,Thriller",1964,1960,110,7.8,Guy Hamilton,Honor Blackman,Gert Fröbe,Lois Maxwell
+4047,Goldfinger,"Action,Adventure,Thriller",1964,1920-1960,110,7.8,Guy Hamilton,Honor Blackman,Gert Fröbe,Lois Maxwell
 662,Gone Baby Gone,"Crime,Drama,Mystery",2007,2000,114,7.7,Ben Affleck,Morgan Freeman, Ed Harris, Casey Affleck
 83,Gone Girl,"Crime,Drama,Mystery",2014,2010,149,8.1,David Fincher,Ben Affleck, Rosamund Pike, Neil Patrick Harris
 282,Gone in Sixty Seconds,"Action,Crime,Thriller",2000,2000,127,6.5,Dominic Sena,Nicolas Cage,Angelina Jolie Pitt,Robert Duvall
-3970,Gone with the Wind,"Drama,History,Romance,War",1939,1930,226,8.2,Victor Fleming,Hattie McDaniel,George Reeves,Thomas Mitchell
+3970,Gone with the Wind,"Drama,History,Romance,War",1939,1920-1960,226,8.2,Victor Fleming,Hattie McDaniel,George Reeves,Thomas Mitchell
 2587,Good,"Drama,Romance,War",2008,2000,92,6.2,Vicente Amorim,Viggo Mortensen,Jodie Whittaker,Steven Mackintosh
 2494,Good Boy!,"Comedy,Drama,Family,Fantasy,Sci-Fi",2003,2000,87,5.1,John Hoffman,Liam Aiken,Molly Shannon,Kevin Nealon
 3576,Good Bye Lenin!,"Drama,Romance",2003,2000,121,7.7,Wolfgang Becker,Florian Lukas,Chulpan Khamatova,Burghart Klaußner
@@ -1781,7 +1781,7 @@
 4300,It's All Gone Pete Tong,"Biography,Comedy,Drama,Music",2004,2000,90,7.4,Michael Dowse,Paul Kaye,Neil Maskell,Kate Magowan
 410,It's Complicated,"Comedy,Drama,Romance",2009,2000,120,6.6,Nancy Meyers,Meryl Streep,Hunter Parrish,Zoe Kazan
 3403,It's Kind of a Funny Story,"Comedy,Drama,Romance",2010,2010,101,7.2,Anna Boden,Zoë Kravitz,Jeremy Davies,Jim Gaffigan
-3267,"It's a Mad, Mad, Mad, Mad World","Action,Adventure,Comedy,Crime",1963,1960,197,7.6,Stanley Kramer,Jonathan Winters,Sid Caesar,Spencer Tracy
+3267,"It's a Mad, Mad, Mad, Mad World","Action,Adventure,Comedy,Crime",1963,1920-1960,197,7.6,Stanley Kramer,Jonathan Winters,Sid Caesar,Spencer Tracy
 1453,J. Edgar,"Biography,Crime,Drama",2011,2010,137,6.6,Clint Eastwood,Leonardo DiCaprio,Naomi Watts,Kaitlyn Dever
 1217,JFK,"Drama,History,Thriller",1991,1990,206,8.0,Oliver Stone,Sally Kirkland,Jay O. Sanders,Cheryl Penland
 3276,Jab Tak Hai Jaan,"Drama,Romance",2012,2010,176,6.9,Yash Chopra,Shah Rukh Khan,Katrina Kaif,Vic Waghorn
@@ -1966,7 +1966,7 @@
 4650,Latter Days,"Comedy,Drama,Romance",2003,2000,107,7.2,C. Jay Cox,Joseph Gordon-Levitt,Rob McElhenney,Jacqueline Bisset
 498,Law Abiding Citizen,"Crime,Drama,Thriller",2009,2000,109,7.4,F. Gary Gray,Gerard Butler, Jamie Foxx, Leslie Bibb
 637,Lawless,"Crime,Drama",2012,2010,116,7.3,John Hillcoat,Tom Hardy, Shia LaBeouf, Guy Pearce
-2644,Lawrence of Arabia,"Adventure,Biography,Drama,History,War",1962,1960,227,8.4,David Lean,Claude Rains,José Ferrer,Jack Hawkins
+2644,Lawrence of Arabia,"Adventure,Biography,Drama,History,War",1962,1920-1960,227,8.4,David Lean,Claude Rains,José Ferrer,Jack Hawkins
 1561,Laws of Attraction,"Comedy,Romance",2004,2000,90,5.9,Peter Howitt,Frances Fisher,Mike Doyle,Nora Dunn
 3567,Layer Cake,"Crime,Drama,Thriller",2004,2000,105,7.4,Matthew Vaughn,Tom Hardy,Sally Hawkins,Jamie Foreman
 3682,Le Havre,"Comedy,Drama",2011,2010,93,7.2,Aki Kaurismäki,Jean-Pierre Léaud,Kati Outinen,Jean-Pierre Darroussin
@@ -2121,7 +2121,7 @@
 2756,Magic Mike XXL,"Comedy,Drama,Music",2015,2010,115,5.7,Gregory Jacobs,Matt Bomer,Channing Tatum,Kevin Nash
 1374,Magnolia,Drama,1999,1990,188,8.0,Paul Thomas Anderson,Patton Oswalt,Neil Flynn,Jim Meskimen
 849,Maid in Manhattan,"Comedy,Drama,Romance",2002,2000,105,5.1,Wayne Wang,Bob Hoskins,Frances Conroy,Natasha Richardson
-3972,Major Dundee,"Adventure,War,Western",1965,1960,152,6.8,Sam Peckinpah,James Coburn,Slim Pickens,Warren Oates
+3972,Major Dundee,"Adventure,War,Western",1965,1920-1960,152,6.8,Sam Peckinpah,James Coburn,Slim Pickens,Warren Oates
 3034,Major League,"Comedy,Sport",1989,1980,107,7.2,David S. Ward,Corbin Bernsen,Tom Berenger,Rene Russo
 78,Major League: Back to the Minors,Comedy,1998,1990,100,4.4,John Warren,Scott Bakula,Corbin Bernsen,Dennis Haysbert
 1429,Malcolm X,"Biography,Drama,History,Romance",1992,1990,202,7.7,Spike Lee,Denzel Washington,Delroy Lindo,Al Freeman Jr.
@@ -2163,7 +2163,7 @@
 1823,Martian Child,"Comedy,Drama,Family",2007,2000,106,6.8,Menno Meyjes,Oliver Platt,Richard Schiff,Sophie Okonedo
 4060,Martin Lawrence Live: Runteldat,"Biography,Comedy,Documentary",2002,2000,113,5.4,David Raynr,Nancy O'Dell,Mikki Padilla,Dayna Devon
 2067,Marvin's Room,Drama,1996,1990,98,6.7,Jerry Zaks,Leonardo DiCaprio,Robert De Niro,Meryl Streep
-3585,Mary Poppins,"Comedy,Family,Fantasy,Musical",1964,1960,139,7.8,Robert Stevenson,Ed Wynn,Glynis Johns,Elsa Lanchester
+3585,Mary Poppins,"Comedy,Family,Fantasy,Musical",1964,1920-1960,139,7.8,Robert Stevenson,Ed Wynn,Glynis Johns,Elsa Lanchester
 1063,Mary Reilly,"Drama,Horror,Romance,Thriller",1996,1990,108,5.8,Stephen Frears,Julia Roberts,Bronagh Gallagher,George Cole
 3448,Masked and Anonymous,"Comedy,Drama,Music",2003,2000,112,5.5,Larry Charles,Jeff Bridges,Cheech Marin,Bruce Dern
 173,Master and Commander: The Far Side of the World,"Action,Adventure,Drama,History,War",2003,2000,138,7.4,Peter Weir,James D'Arcy,Lee Ingleby,David Threlfall
@@ -2217,7 +2217,7 @@
 1630,Message in a Bottle,"Drama,Romance",1999,1990,131,6.1,Luis Mandoki,Robin Wright,John Savage,Raphael Sbarge
 2464,Metallica Through the Never,Music,2013,2010,93,7.2,Nimród Antal,James Hetfield,Mackenzie Gray,Lars Ulrich
 406,Meteor,Drama,1979,1970,108,4.9,Ronald Neame,Sean Connery,Natalie Wood,Karl Malden
-2734,Metropolis,"Drama,Sci-Fi",1927,1920,145,8.3,Fritz Lang,Brigitte Helm,Gustav Fröhlich,Rudolf Klein-Rogge
+2734,Metropolis,"Drama,Sci-Fi",1927,1920-1960,145,8.3,Fritz Lang,Brigitte Helm,Gustav Fröhlich,Rudolf Klein-Rogge
 4788,Metropolitan,"Comedy,Drama,Romance",1990,1990,98,7.5,Whit Stillman,Chris Eigeman,Taylor Nichols,Ellia Thompson
 4241,Mi America,"Crime,Drama",2015,2010,125,7.2,Robert Fontaine,Michael Derek,Arturo Castro,Brad Lee Wind
 2127,Michael Clayton,"Crime,Drama,Mystery,Thriller",2007,2000,119,7.3,Tony Gilroy,Tom Wilkinson,Denis O'Hare,Sydney Pollack
@@ -2259,11 +2259,11 @@
 233,Mission: Impossible - Rogue Nation,"Action,Adventure,Thriller",2015,2010,131,7.4,Christopher McQuarrie,Tom Cruise, Rebecca Ferguson, Jeremy Renner
 220,Mission: Impossible II,"Action,Adventure,Thriller",2000,2000,123,6.1,John Woo,Tom Cruise,Dougray Scott,Richard Roxburgh
 869,Mission: Impossible III,"Action,Adventure,Thriller",2006,2000,126,6.9,J.J. Abrams,Tom Cruise, Michelle Monaghan, Ving Rhames
-4398,Mississippi Mermaid,"Crime,Drama,Romance",1969,1960,123,7.2,François Truffaut,Catherine Deneuve,Jean-Paul Belmondo,Michel Bouquet
+4398,Mississippi Mermaid,"Crime,Drama,Romance",1969,1920-1960,123,7.2,François Truffaut,Catherine Deneuve,Jean-Paul Belmondo,Michel Bouquet
 488,Mixed Nuts,Comedy,1994,1990,97,5.3,Nora Ephron,Steve Martin,Madeline Kahn,Rita Wilson
 3144,Mo' Better Blues,"Drama,Music,Romance",1990,1990,129,6.5,Spike Lee,Denzel Washington,Nicholas Turturro,Charlie Murphy
 13,Moana,"Animation,Adventure,Comedy",2016,2010,107,7.7,Ron Clements,Auli'i Cravalho, Dwayne Johnson, Rachel House
-4427,Modern Times,"Comedy,Drama,Family",1936,1930,87,8.6,Charles Chaplin,Paulette Goddard,Stanley Blystone,Fred Malatesta
+4427,Modern Times,"Comedy,Drama,Family",1936,1920-1960,87,8.6,Charles Chaplin,Paulette Goddard,Stanley Blystone,Fred Malatesta
 465,Modigliani,Art House & International,2004,2000,128,7.4,Mick Davis,Andy Garcia,Elsa Zylberstein,Omid Djalili
 50,Mojados: Through the Night,Documentary,2004,2000,65,7.3,Tommy Davis,Tommy Davis,Guapo,Oso
 2125,Molière,"Comedy,History",2007,2000,120,7.3,Laurent Tirard,Romain Duris,Ludivine Sagnier,Fabrice Luchini
@@ -2354,7 +2354,7 @@
 5042,My Date with Drew,Documentary,2004,2000,90,6.6,Jon Gunn,John August,Brian Herzlinger,Jon Gunn
 3473,My Dog Skip,"Drama,Family,Sport",2000,2000,95,7.0,Jay Russell,Clint Howard,Frankie Muniz,Cody Linley
 4823,My Dog Tulip,"Animation,Drama",2009,2000,83,6.9,Paul Fierlinger,Isabella Rossellini,Peter Gerety,Lynn Redgrave
-2487,My Fair Lady,"Drama,Family,Musical,Romance",1964,1960,170,7.9,George Cukor,Jeremy Brett,Rex Harrison,Theodore Bikel
+2487,My Fair Lady,"Drama,Family,Musical,Romance",1964,1920-1960,170,7.9,George Cukor,Jeremy Brett,Rex Harrison,Theodore Bikel
 775,My Favorite Martian,"Comedy,Family,Sci-Fi",1999,1990,94,4.9,Donald Petrie,Steven Anthony Lawrence,Ray Walston,Michael Lerner
 2128,My Fellow Americans,"Adventure,Comedy",1996,1990,101,6.5,Peter Segal,Wilford Brimley,Bradley Whitford,Sela Ward
 416,My Flesh and Blood,Documentary,2003,2000,83,8.4,Jonathan Karsh,Susan Tom,Joe Tom,Chloe Tom
@@ -2451,7 +2451,7 @@
 3754,Not Easily Broken,"Drama,Romance",2009,2000,99,6.1,Bill Duke,Eddie Cibrian,Jenifer Lewis,Wood Harris
 23,Not Without My Daughter,Drama,1991,1990,116,6.2,Brian Gilbert,Sally Field,Alfred Molina,Sheila Rosenthal
 1800,Notes on a Scandal,"Crime,Drama,Romance,Thriller",2006,2000,92,7.4,Richard Eyre,Phil Davis,Andrew Simpson,Shaun Parkes
-4838,Nothing But a Man,"Drama,Romance",1964,1960,95,8.1,Michael Roemer,Yaphet Kotto,Gloria Foster,Ivan Dixon
+4838,Nothing But a Man,"Drama,Romance",1964,1920-1960,95,8.1,Michael Roemer,Yaphet Kotto,Gloria Foster,Ivan Dixon
 1907,Nothing to Lose,"Action,Adventure,Comedy,Crime",1997,1990,98,6.7,Steve Oedekerk,Kelly Preston,Michael McKean,Rebecca Gayheart
 914,Notorious,"Biography,Crime,Drama",2009,2000,122,6.7,George Tillman Jr.,Jamal Woolard, Anthony Mackie, Derek Luke
 1155,Notting Hill,"Comedy,Drama,Romance",1999,1990,124,7.0,Roger Michell,Julia Roberts,Clarke Peters,Dylan Moran
@@ -2492,14 +2492,14 @@
 4105,Oldboy,"Drama,Mystery,Thriller",2003,2000,120,8.4,Chan-wook Park,Min-sik Choi,Ji-tae Yu,Hye-jeong Kang
 281,Oliver & Company,Animation,1988,1980,74,6.7,George Scribner,Joey Lawrence,Billy Joel,Cheech Marin
 689,Oliver Twist,"Crime,Drama",2005,2000,130,6.9,Roman Polanski,Ian McNeice,Barney Clark,Tony Noble
-3107,Oliver!,"Drama,Family,Musical",1968,1960,153,7.5,Carol Reed,Oliver Reed,Ron Moody,Jack Wild
+3107,Oliver!,"Drama,Family,Musical",1968,1920-1960,153,7.5,Carol Reed,Oliver Reed,Ron Moody,Jack Wild
 453,Olympus Has Fallen,"Action,Thriller",2013,2010,119,6.5,Antoine Fuqua,Gerard Butler, Aaron Eckhart, Morgan Freeman
 988,On Deadly Ground,"Action,Adventure,Thriller",1994,1990,101,4.4,Steven Seagal,Mike Starr,Joan Chen,Sven-Ole Thorsen
 595,On Golden Pond,Drama,1981,1980,109,7.7,Mark Rydell,Henry Fonda,Katharine Hepburn,Jane Fonda
-3375,On Her Majesty's Secret Service,"Action,Adventure,Thriller",1969,1960,142,6.8,Peter R. Hunt,Telly Savalas,George Lazenby,Desmond Llewelyn
+3375,On Her Majesty's Secret Service,"Action,Adventure,Thriller",1969,1920-1960,142,6.8,Peter R. Hunt,Telly Savalas,George Lazenby,Desmond Llewelyn
 3185,On the Line,"Comedy,Family,Romance",2001,2000,85,4.1,Eric Bross,Jerry Stiller,Tamala Jones,Dave Foley
 2017,On the Road,"Adventure,Drama",2012,2010,137,6.1,Walter Salles,Kristen Stewart,Viggo Mortensen,Kirsten Dunst
-4638,On the Waterfront,"Crime,Drama,Romance",1954,1950,108,8.2,Elia Kazan,Marlon Brando,Karl Malden,Rod Steiger
+4638,On the Waterfront,"Crime,Drama,Romance",1954,1920-1960,108,8.2,Elia Kazan,Marlon Brando,Karl Malden,Rod Steiger
 4931,Once,"Drama,Music,Romance",2007,2000,85,7.9,John Carney,Glen Hansard,Markéta Irglová,Darren Healy
 1714,Once Upon a Time in America,"Crime,Drama",1984,1980,251,8.4,Sergio Leone,Robert De Niro,Burt Young,Treat Williams
 1753,Once Upon a Time in Mexico,"Action,Crime,Thriller",2003,2000,102,6.4,Robert Rodriguez,Johnny Depp,Salma Hayek,Enrique Iglesias
@@ -2553,7 +2553,7 @@
 3171,Over Her Dead Body,"Comedy,Fantasy,Romance",2008,2000,95,5.2,Jeff Lowell,Stephen Root,William Morgan Sheppard,Wendi McLendon-Covey
 586,Over the Edge,Drama,1979,1970,95,7.6,Jonathan Kaplan,Michael Eric Kramer,Pamela Ludwig,Matt Dillon
 442,Over the Hedge,"Adventure,Animation,Comedy,Family",2006,2000,83,6.8,Tim Johnson,Bruce Willis,Steve Carell,Catherine O'Hara
-4958,Over the Hill to the Poorhouse,"Crime,Drama",1920,1920,110,4.8,Harry F. Millarde,Stephen Carr,Johnnie Walker,Mary Carr
+4958,Over the Hill to the Poorhouse,"Crime,Drama",1920,1920-1960,110,4.8,Harry F. Millarde,Stephen Carr,Johnnie Walker,Mary Carr
 3212,Owning Mahowny,"Crime,Drama,Thriller",2003,2000,104,7.2,Richard Kwietniowski,Philip Seymour Hoffman,Minnie Driver,Maury Chaykin
 440,Oz the Great and Powerful,"Adventure,Family,Fantasy",2013,2010,130,6.3,Sam Raimi,James Franco, Michelle Williams, Rachel Weisz
 543,P.S. I Love You,"Drama,Romance",2007,2000,126,7.1,Richard LaGravenese,Hilary Swank, Gerard Butler, Harry Connick Jr.
@@ -2567,7 +2567,7 @@
 4579,Palo Alto,Drama,2013,2010,100,6.3,Gia Coppola,James Franco,Nat Wolff,Olivia Crocicchia
 565,Pan,"Adventure,Family,Fantasy",2015,2010,111,5.8,Joe Wright,Levi Miller, Hugh Jackman, Garrett Hedlund
 230,Pan's Labyrinth,"Drama,Fantasy,War",2006,2000,118,8.2,Guillermo del Toro,Ivana Baquero, Ariadna Gil, Sergi López
-4664,Pandora's Box,"Crime,Drama,Romance",1929,1920,110,8.0,Georg Wilhelm Pabst,Louise Brooks,Francis Lederer,Fritz Kortner
+4664,Pandora's Box,"Crime,Drama,Romance",1929,1920-1960,110,8.0,Georg Wilhelm Pabst,Louise Brooks,Francis Lederer,Fritz Kortner
 452,Pandorum,"Action,Horror,Mystery",2009,2000,108,6.8,Christian Alvart,Dennis Quaid, Ben Foster, Cam Gigandet
 1043,Panic Room,"Crime,Drama,Thriller",2002,2000,112,6.8,David Fincher,Kristen Stewart,Dwight Yoakam,Mel Rodriguez
 2261,Paparazzi,"Action,Crime,Drama,Thriller",2004,2000,84,5.8,Paul Abascal,Cole Hauser,Tom Hollander,Kelly Carlson
@@ -2622,7 +2622,7 @@
 641,Pina,Musical & Performing Arts,2011,2010,103,7.7,Wim Wenders,Pina Bausch,Regina Advento,Malou Airaudo
 660,Pineapple Express,"Action,Comedy,Crime",2008,2000,111,7.0,David Gordon Green,Seth Rogen, James Franco, Gary Cole
 5025,Pink Flamingos,"Comedy,Crime,Horror",1972,1970,108,6.1,John Waters,Divine,Mink Stole,Edith Massey
-1143,Pinocchio,"Animation,Family,Fantasy,Musical",1940,1940,88,7.5,Norman Ferguson,Mel Blanc,Dickie Jones,Cliff Edwards
+1143,Pinocchio,"Animation,Family,Fantasy,Musical",1940,1920-1960,88,7.5,Norman Ferguson,Mel Blanc,Dickie Jones,Cliff Edwards
 888,Piranha 3D,"Comedy,Horror,Thriller",2010,2010,88,5.5,Alexandre Aja,Elisabeth Shue, Jerry O'Connell, Richard Dreyfuss
 1037,Pirate Radio,"Comedy,Drama,Music",2009,2000,135,7.4,Richard Curtis,Philip Seymour Hoffman,Charlie Rowe,Tom Sturridge
 75,Pirates of the Caribbean: At World's End,"Action,Adventure,Fantasy",2007,2000,169,7.1,Gore Verbinski,Johnny Depp, Orlando Bloom, Keira Knightley
@@ -2692,7 +2692,7 @@
 2716,Promised Land,Drama,2012,2010,106,6.6,Gus Van Sant,Matt Damon,Hal Holbrook,Terry Kinney
 62,Promises,Documentary,2002,2000,106,8.5,B.Z. Goldberg,Yarko,Daniel,Mahmoud
 681,Proof of Life,"Action,Drama,Thriller",2000,2000,135,6.2,Taylor Hackford,Pamela Reed,Alun Armstrong,Michael Kitchen
-2242,Psycho,"Horror,Mystery,Thriller",1960,1960,108,8.5,Alfred Hitchcock,Janet Leigh,Vera Miles,John Gavin
+2242,Psycho,"Horror,Mystery,Thriller",1960,1920-1960,108,8.5,Alfred Hitchcock,Janet Leigh,Vera Miles,John Gavin
 3941,Psycho Beach Party,"Comedy,Horror,Mystery",2000,2000,85,6.3,Robert Lee King,Lauren Ambrose,Kathleen Robertson,Beth Broderick
 655,Public Enemies,"Biography,Crime,Drama",2009,2000,140,7.0,Michael Mann,Christian Bale, Johnny Depp, Christian Stolte
 3355,Pulp Fiction,"Crime,Drama",1994,1990,178,8.9,Quentin Tarantino,Bruce Willis,Eric Stoltz,Phil LaMarr
@@ -2957,7 +2957,7 @@
 3284,Set It Off,"Action,Crime,Drama,Romance,Thriller",1996,1990,123,6.8,F. Gary Gray,Vivica A. Fox,Jada Pinkett Smith,Blair Underwood
 684,Seven Pounds,"Drama,Romance",2008,2000,123,7.7,Gabriele Muccino,Will Smith, Rosario Dawson, Woody Harrelson
 801,Seven Psychopaths,"Comedy,Crime",2012,2010,110,7.2,Martin McDonagh,Colin Farrell, Woody Harrelson, Sam Rockwell
-4747,Seven Samurai,"Action,Adventure,Drama",1954,1950,202,8.7,Akira Kurosawa,Takashi Shimura,Minoru Chiaki,Kamatari Fujiwara
+4747,Seven Samurai,"Action,Adventure,Drama",1954,1920-1960,202,8.7,Akira Kurosawa,Takashi Shimura,Minoru Chiaki,Kamatari Fujiwara
 611,Seven Years in Tibet,"Adventure,Biography,Drama,History,War",1997,1990,136,7.0,Jean-Jacques Annaud,Brad Pitt,Mako,Victor Wong
 355,Seventh Son,"Action,Adventure,Fantasy",2014,2010,102,5.5,Sergei Bodrov,Ben Barnes, Julianne Moore, Jeff Bridges
 3227,Severance,"Comedy,Horror,Thriller",2006,2000,90,6.6,Christopher Smith,Danny Dyer,Toby Stephens,Laura Harris
@@ -3083,13 +3083,13 @@
 300,Snow Flower And The Secret Fan,Art House & International,2011,2010,104,6.0,Wayne Wang,Gianna Jun,Bingbing Li,Bing Bing Li
 3638,Snow Flower and the Secret Fan,"Drama,History",2011,2010,104,6.1,Wayne Wang,Bingbing Li,Russell Wong,Ji-hyun Jun
 564,Snow White and the Huntsman,"Action,Adventure,Drama",2012,2010,127,6.1,Rupert Sanders,Kristen Stewart, Chris Hemsworth, Charlize Theron
-4449,Snow White and the Seven Dwarfs,"Animation,Family,Fantasy,Musical",1937,1930,83,7.7,William Cottrell,Adriana Caselotti,Billy Gilbert,Lucille La Verne
+4449,Snow White and the Seven Dwarfs,"Animation,Family,Fantasy,Musical",1937,1920-1960,83,7.7,William Cottrell,Adriana Caselotti,Billy Gilbert,Lucille La Verne
 202,Snowden,"Biography,Drama,Thriller",2016,2010,134,7.3,Oliver Stone,Joseph Gordon-Levitt, Shailene Woodley, Melissa Leo
 315,Snowpiercer,"Action,Drama,Sci-Fi",2013,2010,126,7.0,Bong Joon Ho,Chris Evans, Jamie Bell, Tilda Swinton
 386,So I Married an Axe Murderer,Comedy,1993,1990,93,6.4,Thomas Schlamme,Mike Myers,Nancy Travis,Anthony LaPaglia
 558,Soldier,"Action,Drama,Sci-Fi",1998,1990,99,6.0,Paul W.S. Anderson,Connie Nielsen,Sean Pertwee,Jason Scott Lee
 2910,Solitary Man,"Comedy,Drama,Romance",2009,2000,90,6.4,Brian Koppelman,Jenna Fischer,David Costabile,Richard Schiff
-4155,Some Like It Hot,"Comedy,Music,Romance",1959,1950,120,8.3,Billy Wilder,Nehemiah Persoff,Joe E. Brown,George Raft
+4155,Some Like It Hot,"Comedy,Music,Romance",1959,1920-1960,120,8.3,Billy Wilder,Nehemiah Persoff,Joe E. Brown,George Raft
 2057,Someone Like You...,"Comedy,Romance",2001,2000,97,6.1,Tony Goldwyn,Hugh Jackman,Ellen Barkin,Catherine Dent
 288,Someone to Watch over Me,Drama,1987,1980,106,6.1,Ridley Scott,Tom Berenger,Mimi Rogers,Lorraine Bracco
 1443,Something Borrowed,"Comedy,Drama,Romance",2011,2010,112,5.9,Luke Greenfield,Ashley Williams,Steve Howey,Kirsten Day
@@ -3397,7 +3397,7 @@
 4583,The Battle of Shaker Heights,"Comedy,Drama,Romance",2003,2000,79,6.1,Efram Potelle,Shiri Appleby,Elden Henson,Kathleen Quinlan
 27,The Bay,Horror,2012,2010,84,5.6,Barry Levinson,Kristen Connolly,Will Rogers (IV),Kether Donohue
 990,The Beach,"Adventure,Drama,Thriller",2000,2000,119,6.6,Danny Boyle,Leonardo DiCaprio,Virginie Ledoyen,Peter Youngblood Hills
-4893,"The Beast from 20,000 Fathoms","Adventure,Horror,Sci-Fi",1953,1950,80,6.7,Eugène Lourié,Kenneth Tobey,Cecil Kellaway,Ross Elliott
+4893,"The Beast from 20,000 Fathoms","Adventure,Horror,Sci-Fi",1953,1920-1960,80,6.7,Eugène Lourié,Kenneth Tobey,Cecil Kellaway,Ross Elliott
 2149,The Beaver,Drama,2011,2010,91,6.7,Jodie Foster,Jennifer Lawrence,Cherry Jones,Riley Thomas Stewart
 84,The Bedroom Window,Mystery,1987,1980,113,4.9,Curtis Hanson,Steve Guttenberg,Elizabeth McGovern,Isabelle Huppert
 4420,The Believer,Drama,2001,2000,98,7.2,Henry Bean,Ryan Gosling,Theresa Russell,Summer Phoenix
@@ -3409,7 +3409,7 @@
 3285,The Best Man,"Comedy,Drama",1999,1990,120,6.7,Malcolm D. Lee,Harold Perrineau,Sanaa Lathan,Jarrod Bunch
 2495,The Best Man Holiday,"Comedy,Drama",2013,2010,123,6.7,Malcolm D. Lee,Harold Perrineau,Sanaa Lathan,Eddie Cibrian
 2004,The Best Offer,"Crime,Drama,Mystery,Romance",2013,2010,131,7.8,Giuseppe Tornatore,Jim Sturgess,Sean Buchanan,Liya Kebede
-4238,The Best Years of Our Lives,"Drama,Romance,War",1946,1940,172,8.1,William Wyler,Myrna Loy,Teresa Wright,Dana Andrews
+4238,The Best Years of Our Lives,"Drama,Romance,War",1946,1920-1960,172,8.1,William Wyler,Myrna Loy,Teresa Wright,Dana Andrews
 404,The Best of Me,"Drama,Romance",2014,2010,118,6.7,Michael Hoffman,James Marsden, Michelle Monaghan, Luke Bracey
 4802,The Beyond,Horror,1981,1980,82,6.9,Lucio Fulci,Catriona MacColl,David Warbeck,Al Cliver
 1030,The Big Bounce,"Comedy,Crime",2004,2000,88,4.9,George Armitage,Morgan Freeman,Andrew Wilson,Willie Nelson
@@ -3452,9 +3452,9 @@
 4646,The Brass Teapot,"Comedy,Fantasy,Thriller",2012,2010,101,6.4,Ramaa Mosley,Jack McBrayer,Michael Angarano,Alia Shawkat
 550,The Break-Up,"Comedy,Drama,Romance",2006,2000,106,5.8,Peyton Reed,Jennifer Aniston, Vince Vaughn, Jon Favreau
 2045,The Bridge of San Luis Rey,"Drama,Romance",2004,2000,120,5.1,Mary McGuckian,Robert De Niro,F. Murray Abraham,Geraldine Chaplin
-4066,The Bridge on the River Kwai,"Adventure,Drama,War",1957,1950,161,8.2,David Lean,William Holden,Sessue Hayakawa,Jack Hawkins
+4066,The Bridge on the River Kwai,"Adventure,Drama,War",1957,1920-1960,161,8.2,David Lean,William Holden,Sessue Hayakawa,Jack Hawkins
 2086,The Bridges of Madison County,"Drama,Romance",1995,1990,135,7.5,Clint Eastwood,Clint Eastwood,Meryl Streep,Debra Monk
-4812,The Broadway Melody,"Musical,Romance",1929,1920,100,6.3,Harry Beaumont,Anita Page,Bessie Love,Charles King
+4812,The Broadway Melody,"Musical,Romance",1929,1920-1960,100,6.3,Harry Beaumont,Anita Page,Bessie Love,Charles King
 4567,The Broken Hearts Club: A Romantic Comedy,"Comedy,Drama,Romance,Sport",2000,2000,94,7.0,Greg Berlanti,Justin Theroux,Nia Long,Mary McCormack
 88,The Brother from Another Planet,Drama,1984,1980,108,6.8,John Sayles,Joe Morton,Darryl Edwards,Steve James
 3590,The Brothers,"Comedy,Drama",2001,2000,106,6.3,Gary Hardwick,Julie Benz,Tatyana Ali,Jenifer Lewis
@@ -3661,7 +3661,7 @@
 3979,The Good Heart,Drama,2009,2000,99,6.9,Dagur Kári,Alice Olivia Clarke,Susan Blommaert,Stephen Henderson
 2747,The Good Night,"Comedy,Drama,Fantasy,Music,Romance",2007,2000,93,5.9,Jake Paltrow,Stephen Graham,Gael Le Cornec,Keith Allen
 1717,The Good Thief,"Action,Crime,Drama,Romance,Thriller",2002,2000,109,6.6,Neil Jordan,Emir Kusturica,Saïd Taghmaoui,Tchéky Karyo
-4498,"The Good, the Bad and the Ugly",Western,1966,1960,142,8.9,Sergio Leone,Clint Eastwood,Luigi Pistilli,Enzo Petito
+4498,"The Good, the Bad and the Ugly",Western,1966,1920-1960,142,8.9,Sergio Leone,Clint Eastwood,Luigi Pistilli,Enzo Petito
 3255,"The Good, the Bad, the Weird","Action,Adventure,Comedy,Western",2008,2000,135,7.3,Jee-woon Kim,Kang-ho Song,Woo-sung Jung,Dal-su Oh
 3153,"The Goods: Live Hard, Sell Hard",Comedy,2009,2000,89,5.8,Neal Brennan,Rob Riggle,Noureen DeWulf,Charles Napier
 4900,The Grace Card,Drama,2010,2010,101,6.4,David G. Evans,Michael Joiner,Chris Thomas,Michael Higgenbottom
@@ -3675,8 +3675,8 @@
 3637,The Greatest,"Drama,Romance",2009,2000,96,6.7,Shana Feste,Jennifer Ehle,Zoë Kravitz,Cara Seymour
 1958,The Greatest Game Ever Played,"Drama,History,Sport",2005,2000,120,7.5,Bill Paxton,Stephen Dillane,Matthew Knight,Amanda Tilson
 4366,The Greatest Movie Ever Sold,"Comedy,Documentary",2011,2010,90,6.6,Morgan Spurlock,Quentin Tarantino,J.J. Abrams,Donald Trump
-3890,The Greatest Show on Earth,"Drama,Family,Romance",1952,1950,152,6.7,Cecil B. DeMille,Gloria Grahame,Dorothy Lamour,Cornel Wilde
-2266,The Greatest Story Ever Told,"Biography,Drama,History",1965,1960,225,6.6,George Stevens,Martin Landau,Carroll Baker,José Ferrer
+3890,The Greatest Show on Earth,"Drama,Family,Romance",1952,1920-1960,152,6.7,Cecil B. DeMille,Gloria Grahame,Dorothy Lamour,Cornel Wilde
+2266,The Greatest Story Ever Told,"Biography,Drama,History",1965,1920-1960,225,6.6,George Stevens,Martin Landau,Carroll Baker,José Ferrer
 259,The Green Hornet,"Action,Comedy,Crime,Sci-Fi,Thriller",2011,2010,119,5.8,Michel Gondry,Christoph Waltz,Tom Wilkinson,Chad L. Coleman
 527,The Green Inferno,"Adventure,Horror",2013,2010,100,5.4,Eli Roth,Lorenza Izzo, Ariel Levy, Aaron Burns
 712,The Green Mile,"Crime,Drama,Fantasy,Mystery",1999,1990,189,8.5,Frank Darabont,Tom Hanks,Jeffrey DeMunn,Michael Jeter
@@ -3797,7 +3797,7 @@
 2259,The Kite Runner,Drama,2007,2000,128,7.6,Marc Forster,Mustafa Haidari,Shaun Toub,Khalid Abdalla
 4505,The Knife of Don Juan,"Comedy,Drama",2013,2010,110,7.2,Tom Sanchez,Nataniel Sánchez,Antonio Arrué,Juan Carlos Montoya
 3050,The Ladies Man,Comedy,2000,2000,84,5.1,Reginald Hudlin,Will Ferrell,John Witherspoon,Tim Meadows
-4328,The Lady from Shanghai,"Crime,Drama,Film-Noir,Mystery,Thriller",1947,1940,92,7.7,Orson Welles,Rita Hayworth,Everett Sloane,Ted de Corsia
+4328,The Lady from Shanghai,"Crime,Drama,Film-Noir,Mystery,Thriller",1947,1920-1960,92,7.7,Orson Welles,Rita Hayworth,Everett Sloane,Ted de Corsia
 1439,The Ladykillers,"Comedy,Crime,Thriller",2004,2000,104,6.2,Ethan Coen,J.K. Simmons,Tom Hanks,Stephen Root
 1241,The Lake House,"Drama,Fantasy,Romance",2006,2000,99,6.8,Alejandro Agresti,Keanu Reeves,Dylan Walsh,Ebon Moss-Bachrach
 2913,The Land Before Time,"Adventure,Animation,Family",1988,1980,69,7.3,Don Bluth,Judith Barsi,Gabriel Damon,Bill Erwin
@@ -4003,7 +4003,7 @@
 1448,The Pianist,"Biography,Drama,War",2002,2000,150,8.5,Roman Polanski,Emilia Fox,Frank Finlay,Ed Stoppard
 3469,The Piano,"Drama,Music,Romance",1993,1990,121,7.6,Jane Campion,Holly Hunter,Ian Mune,Geneviève Lemon
 467,The Pink Panther,"Adventure,Comedy,Crime,Family,Mystery",2006,2000,93,5.6,Shawn Levy,Roger Rees,Henry Czerny,William Abadie
-3978,The Pirate,"Adventure,Comedy,Musical,Romance",1948,1940,102,7.1,Vincente Minnelli,Gladys Cooper,Reginald Owen,Ellen Ross
+3978,The Pirate,"Adventure,Comedy,Musical,Romance",1948,1920-1960,102,7.1,Vincente Minnelli,Gladys Cooper,Reginald Owen,Ellen Ross
 2685,The Pirates Who Don't Do Anything: A VeggieTales Movie,"Adventure,Animation,Comedy,Family",2008,2000,85,5.7,Mike Nawrocki,Yuri Lowenthal,Cam Clarke,Phil Vischer
 876,The Pirates! Band of Misfits,"Adventure,Animation,Comedy,Family",2012,2010,88,6.7,Peter Lord,Salma Hayek,Russell Tovey,Brian Blessed
 242,The Pit and the Pendulum,Horror,1991,1990,97,6.1,Stuart Gordon,Lance Henriksen,Rona De Ricci,Jonathan Fuller
@@ -4069,7 +4069,7 @@
 1106,The River Wild,"Action,Adventure,Crime,Thriller",1994,1990,111,6.3,Curtis Hanson,Meryl Streep,Glenn Morshower,William Lucking
 755,The Road,"Adventure,Drama",2009,2000,111,7.3,John Hillcoat,Viggo Mortensen, Charlize Theron, Kodi Smit-McPhee
 334,The Road to El Dorado,"Adventure,Animation,Comedy,Family,Romance",2000,2000,89,6.9,Bibo Bergeron,Frank Welker,Rosie Perez,Elton John
-3707,The Robe,"Drama,History",1953,1950,135,6.8,Henry Koster,Richard Burton,Jean Simmons,Victor Mature
+3707,The Robe,"Drama,History",1953,1920-1960,135,6.8,Henry Koster,Richard Burton,Jean Simmons,Victor Mature
 528,The Rock,"Action,Adventure,Thriller",1996,1990,136,7.4,Michael Bay,Nicolas Cage,Michael Biehn,Bokeem Woodbine
 2714,The Rocker,"Comedy,Music",2008,2000,102,6.2,Peter Cattaneo,Emma Stone,Bradley Cooper,Josh Gad
 2084,The Rookie,"Drama,Family,Sport",2002,2000,127,7.0,John Lee Hancock,Dennis Quaid,Jay Hernandez,Angus T. Jones
@@ -4138,7 +4138,7 @@
 786,The Soloist,"Biography,Drama,Music",2009,2000,117,6.7,Joe Wright,Robert Downey Jr.,Stephen Root,Rachael Harris
 2745,The Son of No One,"Crime,Drama,Thriller",2011,2010,90,5.1,Dito Montiel,Channing Tatum,Al Pacino,Tracy Morgan
 104,The Sorcerer's Apprentice,"Action,Adventure,Family,Fantasy",2010,2010,109,6.1,Jon Turteltaub,Nicolas Cage,Omar Benson Miller,Robert Capron
-3359,The Sound of Music,"Biography,Drama,Family,Musical,Romance",1965,1960,174,8.0,Robert Wise,Eleanor Parker,Angela Cartwright,Nicholas Hammond
+3359,The Sound of Music,"Biography,Drama,Family,Musical,Romance",1965,1920-1960,174,8.0,Robert Wise,Eleanor Parker,Angela Cartwright,Nicholas Hammond
 324,The Spanish Prisoner,"Drama,Mystery,Thriller",1997,1990,110,7.3,David Mamet,Ben Gazzara,Felicity Huffman,Campbell Scott
 1097,The Specialist,"Action,Crime,Drama,Romance,Thriller",1994,1990,110,5.4,Luis Llosa,Sylvester Stallone,Rod Steiger,Emilio Estefan Jr.
 4599,The Specials,"Action,Comedy,Fantasy,Sci-Fi",2000,2000,82,6.0,Craig Mazin,Judy Greer,James Gunn,Jamie Kennedy
@@ -4257,7 +4257,7 @@
 3349,The Wind That Shakes the Barley,"Drama,War",2006,2000,127,7.5,Ken Loach,Padraic Delaney,Orla Fitzgerald,Martin Lucey
 3996,The Witch,"Horror,Mystery",2015,2010,92,6.8,Robert Eggers,Julian Richings,Kate Dickie,Ralph Ineson
 2037,The Wiz,"Adventure,Family,Fantasy,Music,Musical",1978,1970,118,5.2,Sidney Lumet,Lena Horne,Diana Ross,Theresa Merritt
-4157,The Wizard of Oz,"Adventure,Family,Fantasy,Musical",1939,1930,102,8.1,Victor Fleming,Margaret Hamilton,Terry,Billie Burke
+4157,The Wizard of Oz,"Adventure,Family,Fantasy,Musical",1939,1920-1960,102,8.1,Victor Fleming,Margaret Hamilton,Terry,Billie Burke
 82,The Wolf of Wall Street,"Biography,Comedy,Crime",2013,2010,180,8.2,Martin Scorsese,Leonardo DiCaprio, Jonah Hill, Margot Robbie
 136,The Wolfman,"Drama,Fantasy,Horror,Thriller",2010,2010,119,5.8,Joe Johnston,Anthony Hopkins,Simon Merrells,Art Malik
 388,The Wolverine,"Action,Adventure,Sci-Fi",2013,2010,126,6.7,James Mangold,Hugh Jackman, Will Yun Lee, Tao Okamoto
@@ -4321,7 +4321,7 @@
 2288,Three to Tango,"Comedy,Romance",1999,1990,98,6.1,Damon Santostefano,Matthew Perry,Oliver Platt,David Ramsey
 3928,Thumbsucker,"Comedy,Drama",2005,2000,96,6.6,Mike Mills,Kelli Garner,Lou Taylor Pucci,Nancy O'Dell
 1527,Thunder and the House of Magic,"Adventure,Animation,Comedy,Family,Fantasy",2013,2010,85,6.3,Jeremy Degruson,Kyle Hebert,Brianne Brozey,Joe Ochman
-3281,Thunderball,"Action,Adventure,Thriller",1965,1960,130,7.0,Terence Young,Desmond Llewelyn,Earl Cameron,Lois Maxwell
+3281,Thunderball,"Action,Adventure,Thriller",1965,1920-1960,130,7.0,Terence Young,Desmond Llewelyn,Earl Cameron,Lois Maxwell
 887,Thunderbirds,"Action,Adventure,Comedy,Family,Sci-Fi",2004,2000,95,4.2,Jonathan Frakes,Sophia Myles,Philip Winchester,Brady Corbet
 432,Thunderheart,Drama,1992,1990,119,6.8,Michael Apted,Val Kilmer,Sam Shepard,Graham Greene (II)
 4117,Tim and Eric's Billion Dollar Movie,Comedy,2012,2010,93,5.3,Tim Heidecker,Michael Gross,William Atherton,Bob Ross
@@ -4348,7 +4348,7 @@
 2603,Tootsie,"Comedy,Drama,Romance",1982,1980,116,7.4,Sydney Pollack,Bill Murray,Sydney Pollack,Teri Garr
 2949,Top Five,"Comedy,Romance",2014,2010,102,6.5,Chris Rock,Rosario Dawson,Romany Malco,J.B. Smoove
 2604,Top Gun,"Action,Drama,Romance",1986,1980,110,6.9,Tony Scott,Tom Cruise,Tom Skerritt,Adrian Pasdar
-4706,Top Hat,"Comedy,Musical,Romance",1935,1930,81,7.8,Mark Sandrich,Ginger Rogers,Edward Everett Horton,Eric Blore
+4706,Top Hat,"Comedy,Musical,Romance",1935,1920-1960,81,7.8,Mark Sandrich,Ginger Rogers,Edward Everett Horton,Eric Blore
 196,Top Secret!,Comedy,1984,1980,90,7.2,David Zucker,Val Kilmer,Omar Sharif,Lucy Gutteridge
 4940,Top Spin,Documentary,2014,2010,80,7.1,Sara Newens,Ariel Hsing,Xinhua Jiang,Michael Landers
 2308,Topsy-Turvy,"Biography,Comedy,Drama,History,Music,Musical",1999,1990,154,7.4,Mike Leigh,Jim Broadbent,Dexter Fletcher,Lesley Manville
@@ -4495,7 +4495,7 @@
 2525,Veronica Guerin,"Biography,Crime,Drama,Thriller",2003,2000,98,6.9,Joel Schumacher,Brenda Fricker,David Murray,Gerard McSorley
 426,Veronica Mars,Drama,2014,2010,107,6.8,Rob Thomas (III),Kristen Bell,Ryan Hansen,Jason Dohring
 539,Vertical Limit,"Action,Adventure,Drama,Thriller",2000,2000,124,5.9,Martin Campbell,Nicholas Lea,Scott Glenn,Ben Mendelsohn
-99,Vertigo,"Classics, Mystery, Romance",1958,1950,128,9.3,Alfred Hitchcock,James Stewart,Kim Novak,Barbara Bel Geddes
+99,Vertigo,"Classics, Mystery, Romance",1958,1920-1960,128,9.3,Alfred Hitchcock,James Stewart,Kim Novak,Barbara Bel Geddes
 3164,Very Bad Things,"Comedy,Crime,Thriller",1998,1990,100,6.3,Peter Berg,Jon Favreau,Daniel Stern,Jeanne Tripplehorn
 853,Vicky Cristina Barcelona,"Drama,Romance",2008,2000,96,7.1,Woody Allen,Rebecca Hall, Scarlett Johansson, Javier Bardem
 326,Victor Frankenstein,"Drama,Horror,Sci-Fi",2015,2010,110,6.0,Paul McGuigan,Daniel Radcliffe, James McAvoy, Jessica Brown Findlay
@@ -4562,7 +4562,7 @@
 4661,Welcome to the Dollhouse,"Comedy,Drama",1995,1990,88,7.5,Todd Solondz,Heather Matarazzo,Ken Leung,Christina Vidal
 3229,Welcome to the Rileys,Drama,2010,2010,110,7.0,Jake Scott,Kristen Stewart,Ally Sheedy,Kerry Cahill
 4833,Wendy and Lucy,Drama,2008,2000,80,7.1,Kelly Reichardt,John Robinson,Lucy,Will Oldham
-3588,West Side Story,"Crime,Drama,Musical,Romance,Thriller",1961,1960,152,7.6,Jerome Robbins,Rita Moreno,George Chakiris,Richard Beymer
+3588,West Side Story,"Crime,Drama,Musical,Romance,Thriller",1961,1920-1960,152,7.6,Jerome Robbins,Rita Moreno,George Chakiris,Richard Beymer
 3876,Whale Rider,"Drama,Family",2002,2000,101,7.6,Niki Caro,Keisha Castle-Hughes,Rawiri Paratene,Tammy Davis
 564,What About Bob?,Drama,1991,1990,99,7.0,Frank Oz,Bill Murray,Richard Dreyfuss,Julie Hagerty
 485,What Dreams May Come,"Drama,Fantasy,Romance",1998,1990,113,7.0,Vincent Ward,Robin Williams,Annabella Sciorra,Rosalind Chao
@@ -4672,7 +4672,7 @@
 837,You Don't Mess with the Zohan,"Action,Comedy",2008,2000,113,5.5,Dennis Dugan,Adam Sandler, John Turturro, Emmanuelle Chriqui
 3364,You Got Served,"Drama,Music",2004,2000,95,3.5,Chris Stokes,Jennifer Freeman,Marques Houston,Steve Harvey
 3927,You Kill Me,"Comedy,Crime,Romance,Thriller",2007,2000,93,6.5,John Dahl,Philip Baker Hall,Aaron Hughes,Jayne Eastwood
-3262,You Only Live Twice,"Action,Adventure,Thriller",1967,1960,117,6.9,Lewis Gilbert,Donald Pleasence,Burt Kwouk,Desmond Llewelyn
+3262,You Only Live Twice,"Action,Adventure,Thriller",1967,1920-1960,117,6.9,Lewis Gilbert,Donald Pleasence,Burt Kwouk,Desmond Llewelyn
 2725,You Will Meet a Tall Dark Stranger,"Comedy,Drama,Romance",2010,2010,98,6.3,Woody Allen,Anthony Hopkins,Naomi Watts,Ewen Bremner
 659,You've Got Mail,"Comedy,Drama,Romance",1998,1990,119,6.5,Nora Ephron,Tom Hanks,Jean Stapleton,Dave Chappelle
 897,"You, Me and Dupree","Comedy,Romance",2006,2000,110,5.6,Anthony Russo,Todd Stashwick,Billy Gardell,Amanda Detmer

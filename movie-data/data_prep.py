@@ -118,11 +118,15 @@ def get_decade(year):
         return None
 
 joined['decade'] = (joined['year']//10)*10
+joined['decade'] = joined['decade'].apply(lambda y: y if y >=1970 else "1920-1960")
+
 
 joined = joined[['title', 'genre', 'year', 'decade','runtime',  'rating', 'director', 'actor1', 'actor2', 'actor3']]
 
 
 joined = joined.sort_values(by=['title'])
+# decades = joined.groupby('decade').count()
+# print(decades['title'])
 
 #print(joined['title'].value_counts())
 joined.to_csv('all.csv')
