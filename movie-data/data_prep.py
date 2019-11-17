@@ -105,25 +105,25 @@ both_rotten['genre'] = both_rotten['genre'].apply(', '.join)
 
 joined = pd.concat([imdb, metadata, movie, both_rotten], sort=False)
 joined['title'] = joined['title'].str.strip()
-#print(joined.head())
-#print(len(joined.index)) #5750 rows
 
-# joined = joined['title'].value_counts()
-# print(joined) #5570
 joined = joined.drop_duplicates(subset='title', keep='first')
 #print(joined)
 
-# input_pattern_2 = re.compile(r'\d\d(\d)')
-# def get_runtime(runtime):
-#     match = input_pattern.search(runtime)
-#     if match:
-#         return match.group(1)
-#     else:
-#         return None
+input_pattern_2 = re.compile(r'\d\d(\d)\d')
+def get_decade(year):
+    match = input_pattern_2.search(year)
+    if match:
+        return match.group(1)
+    else:
+        return None
+
+joined['decade'] = (joined['year']//10)*10
+
+joined = joined[['title', 'genre', 'year', 'decade','runtime',  'rating', 'director', 'actor1', 'actor2', 'actor3']]
 
 
 joined = joined.sort_values(by=['title'])
-print(joined)
+
 #print(joined['title'].value_counts())
 joined.to_csv('all.csv')
 
