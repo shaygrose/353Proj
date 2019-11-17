@@ -3,7 +3,7 @@ import sys
 import re
 
 # SCHEMA
-#runtime (minutes, int), rating(out of 10, float to 1 decimal place), gross (millions, float to 2 decimals places), year (int)
+#title, genre, year(int), decade, runtime (minutes, int), rating (out of 10, float to 1 decimal place), director, actor1, actor2, actor3, gross (millions, float to 2 decimals places)
 
 
 
@@ -18,8 +18,6 @@ def get_runtime(runtime):
 
 
 #IMDB
-# has all actors in single column as list
-# has genres as list separated by comma (ex. Action,Adventure,Fantasy)
 imdb = pd.read_csv(sys.argv[1], usecols = ['Title','Genre', 'Year', 'Runtime (Minutes)', 'Rating', 'Director', 'Actors', 'Revenue (Millions)'])
 #reorder columns
 imdb[['actor1', 'actor2', 'actor3', 'actor4']] = imdb.Actors.str.split(',', expand=True)
@@ -35,8 +33,6 @@ imdb = imdb.dropna()
 
 
 #MOVIES METADATA
-#also need to decide if we want to have actors as one columns with a list of *3 actors*, or 3 separate columns with one actor each
-#has list of genres separated with | (ex. Action|Adventure|Fantasy)
 metadata = pd.read_csv(sys.argv[2], usecols = ['movie_title', 'genres', 'title_year', 'duration', 'imdb_score', 'director_name', 'actor_1_name', 'actor_2_name', 'actor_3_name', 'gross'])
 #reorders columns
 metadata = metadata[['movie_title', 'genres', 'title_year', 'duration', 'imdb_score', 'director_name', 'actor_1_name', 'actor_2_name', 'actor_3_name', 'gross']]
@@ -53,9 +49,6 @@ metadata['genre'] = metadata['genre'].str.replace('|',',')
 
 
 # MOVIES
-#doesn't have box office gross
-#*5 actors*
-#one genre
 movie = pd.read_csv(sys.argv[3], usecols = ['title', 'genre', 'thtr_rel_year', 'runtime', 'imdb_rating', 'director', 'actor1', 'actor2', 'actor3', 'actor4', 'actor5'])
 #reorder columns
 movie = movie[['title', 'genre', 'thtr_rel_year', 'runtime', 'imdb_rating', 'director', 'actor1', 'actor2', 'actor3', 'actor4', 'actor5']]
@@ -67,16 +60,9 @@ movie = movie.astype({'year': 'int32', 'runtime':'int32'})
 movie = movie.drop(['actor4', 'actor5'], axis = 1)
 
 
-rotten_ratings = pd.read_csv(sys.argv[5], sep = '\t', usecols = ['Movie', 'Rating'])
-rotten_ratings.columns = rotten_ratings.columns.str.lower()
-rotten_ratings = rotten_ratings.rename(columns = {'movie': 'title'})
-rotten_ratings['rating'] = rotten_ratings['rating']/10
-#print(rotten_ratings.head())
 
-# ROTTEN TOMATOES 
-#doesn't have much useful data, but could possibly join it to one of the other dataframes on common movie titles
-#*6 actors*
-#one genre
+
+# ROTTEN TOMATOES (no ratings)
 rotten = pd.read_csv(sys.argv[4], usecols = ['Title', 'Genre', 'Year', 'Runtime', 'Director 1', 'Cast 1', 'Cast 2', 'Cast 3', 'Cast 4', 'Cast 5', 'Cast 6'])
 #reorder columns
 rotten = rotten[['Title', 'Genre', 'Year', 'Runtime', 'Director 1', 'Cast 1', 'Cast 2', 'Cast 3', 'Cast 4', 'Cast 5', 'Cast 6']]
@@ -89,46 +75,45 @@ rotten['runtime'] = rotten['runtime'].apply(get_runtime)
 #include only 3 actors
 rotten = rotten.drop(['actor4', 'actor5', 'actor6'], axis = 1)
 
+# ROTTEN TOMATOES (has ratings)
 
+rotten_ratings = pd.read_csv(sys.argv[5], sep = '\t', usecols = ['Movie', 'Rating'])
+rotten_ratings.columns = rotten_ratings.columns.str.lower()
+rotten_ratings = rotten_ratings.rename(columns = {'movie': 'title'})
+rotten_ratings['rating'] = rotten_ratings['rating']/10
 
-
-
+# combine rotten tomatoes datasets on common movies, to get ratings for movies
 both_rotten = pd.merge(rotten, rotten_ratings, on = 'title')
-
 both_rotten = both_rotten.groupby(['title', 'year', 'runtime', 'director', 'actor1', 'actor2', 'actor3', 'rating']).genre.unique().reset_index()
-
 both_rotten = both_rotten[['title', 'genre', 'year', 'runtime',  'rating', 'director', 'actor1', 'actor2', 'actor3']]
 both_rotten['genre'] = both_rotten['genre'].apply(', '.join)
 
 
-
-
+#FINAL
+#concat all datasets together into one dataframe
 joined = pd.concat([imdb, metadata, movie, both_rotten], sort=False)
 joined['title'] = joined['title'].str.strip()
 
+#drop duplicate movies
 joined = joined.drop_duplicates(subset='title', keep='first')
-#print(joined)
 
-input_pattern_2 = re.compile(r'\d\d(\d)\d')
-def get_decade(year):
-    match = input_pattern_2.search(year)
-    if match:
-        return match.group(1)
-    else:
-        return None
-
+#add decade column
 joined['decade'] = (joined['year']//10)*10
-joined['decade'] = joined['decade'].apply(lambda y: y if y >=1970 else "1920-1960")
 
-
-joined = joined[['title', 'genre', 'year', 'decade','runtime',  'rating', 'director', 'actor1', 'actor2', 'actor3']]
-
-
-joined = joined.sort_values(by=['title'])
+# decades range from 1920-2010
 # decades = joined.groupby('decade').count()
 # print(decades['title'])
 
+#since there are <40 sample points for 1920, 1930, 1940, 1950 and 1960, we grouped them all together into 1920-1960 
+joined['decade'] = joined['decade'].apply(lambda y: y if y >=1970 else "1920-1960")
+
+#reorder columns
+joined = joined[['title', 'genre', 'year', 'decade','runtime', 'rating', 'director', 'actor1', 'actor2', 'actor3', 'gross']]
+joined = joined.sort_values(by=['title'])
+#print(joined)
 #print(joined['title'].value_counts())
 joined.to_csv('all.csv')
+
+
 
 
