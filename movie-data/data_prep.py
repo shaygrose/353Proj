@@ -96,11 +96,8 @@ both_rotten = pd.merge(rotten, rotten_ratings, on = 'title')
 both_rotten = both_rotten.groupby(['title', 'year', 'runtime', 'director', 'actor1', 'actor2', 'actor3', 'rating']).genre.unique().reset_index()
 
 both_rotten = both_rotten[['title', 'genre', 'year', 'runtime',  'rating', 'director', 'actor1', 'actor2', 'actor3']]
-
-
-
 both_rotten['genre'] = both_rotten['genre'].apply(', '.join)
-print(both_rotten.head())
+
 
 
 
