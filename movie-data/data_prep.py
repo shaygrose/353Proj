@@ -50,6 +50,8 @@ metadata['genre'] = metadata['genre'].str.replace('|',',')
 
 
 
+
+
 # MOVIES
 #doesn't have box office gross
 #*5 actors*
@@ -101,28 +103,27 @@ both_rotten['genre'] = both_rotten['genre'].apply(', '.join)
 
 
 
-
-#Display
-#print(imdb.head())
-#print(len(imdb.index)) #872 rows
-#print(metadata.head())
-#print(len(metadata.index)) #4141 rows
-#print(movie.head())
-#print(len(movie.index)) #634 rows
-#print(rotten.head())
-#print(len(rotten.index)) #29284 rows
-
-
-#not including rotten tomatoes
 joined = pd.concat([imdb, metadata, movie, both_rotten], sort=False)
+joined['title'] = joined['title'].str.strip()
 #print(joined.head())
 #print(len(joined.index)) #5750 rows
 
 # joined = joined['title'].value_counts()
 # print(joined) #5570
-joined= joined.drop_duplicates(subset='title', keep='first')
-joined = joined.sort_values(by=['title'])
+joined = joined.drop_duplicates(subset='title', keep='first')
 #print(joined)
+
+# input_pattern_2 = re.compile(r'\d\d(\d)')
+# def get_runtime(runtime):
+#     match = input_pattern.search(runtime)
+#     if match:
+#         return match.group(1)
+#     else:
+#         return None
+
+
+joined = joined.sort_values(by=['title'])
+print(joined)
 #print(joined['title'].value_counts())
 joined.to_csv('all.csv')
 
