@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import sys
 from scipy import stats
 import seaborn as sns
+from pylab import *
 
 data = pd.read_csv(sys.argv[1])
 sns.set()
@@ -14,17 +15,6 @@ rating = data['rating']
 year = data['year']
 gross = data['gross']
 runtime = data['runtime']
-
-def plot_fig(x_axis, y_axis, title, xlabel, ylabel):
-    x = x_axis
-    y = y_axis
-    plt.figure(figsize=(10, 5))
-    plt.plot(x, y, '.b', alpha=0.5)
-    plt.title(title)
-    plt.ylabel(ylabel)
-    plt.xlabel(xlabel)
-    ax1 = plt.axes()
-    x_axis = ax1.axes.get_xaxis().set_ticks([])
 
 def getGenreAndRating(data, genreColumn):
     temp = pd.DataFrame()
@@ -105,24 +95,34 @@ fig.set_xlabel('Decade')
 fig.set_ylabel('Average Rating')
 fig.set_title('Decade vs Average Rating')
 
-#average per decade
-# favorite_of_decade = pd.DataFrame()
-# favorite_of_decade['1960'] = action.groupby('decade').agg({'rating':'mean'}).max()
-# favorite_of_decade = adventure.groupby('decade').agg({'rating':'mean'})
-# print(favorite_of_decade)
 
+def getDirectorRating(d):
+    avg_rating = data[data['director'] == d]['rating'].mean()
+    return avg_rating
 
-# plot_fig(director, rating, 'Director vs. Rating', 'Director', 'Rating')
+# director vs rating. Directors with at least 10 movies are considered
+director_rating = pd.DataFrame()
+director_rating[['director','count']] = data.groupby('director').size().sort_values().reset_index()
+director_rating = director_rating[director_rating['count'] >= 10].reset_index()
+director_rating['rating'] = director_rating['director'].apply(getDirectorRating)
+avg_rating = pd.DataFrame()
+avg_rating[['director', 'rating']] = director_rating[['director', 'rating']]
+fig = plt.figure(figsize=(15,10))
+ax = plt.subplot()
+ax.barh(avg_rating['director'], avg_rating['rating'])
+ax.set_xlabel('Rating')
+ax.set_ylabel('Director')
+ax.set_title('Director vs Rating')
 
 #runtime vs. rating
-fit = stats.linregress(runtime, rating)
 plt.figure(figsize=(15,5))
 plt.title('Runtime vs Rating')
 plt.ylabel('Rating')
 plt.xlabel('Runtime (minutes)')
+(m,b) = polyfit(runtime, rating, 1)
+yp = polyval([m,b], runtime)
 plt.plot(runtime, rating, '.b', alpha=0.5)
-# plt.plot(runtime, gross * fit.slope + fit.intercept, 'r-', linewidth = 3)
-
+plt.plot(runtime, yp, '-r', linewidth=2)
 
 plt.show()
 
