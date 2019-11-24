@@ -25,11 +25,11 @@ def get_director_index(x, leest):
     #print(np.where(directors_names == x))
     return np.where(leest == x)[0][0]
 
-data['director code'] = data['director'].apply(get_director_index)
-data['actor1_code'] = data['actor1'].astype('category', CatergoricalDtype = actor_1_name).cat.codes
-data['actor2_code'] = data['actor2'].astype('category', CatergoricalDtype = actor_2_name).cat.codes
-data['actor3_code'] = data['actor3'].astype('category', CatergoricalDtype = actor_3_name).cat.codes
-data['genre_code'] = data['genre'].astype('category', CatergoricalDtype = genre_genre).cat.codes
+data['director code'] = data['director'].apply(get_director_index, leest = directors_names)
+data['actor1_code'] = data['actor1'].apply(get_director_index, leest = actor_1_name)
+data['actor2_code'] = data['actor2'].apply(get_director_index, leest = actor_2_name)
+data['actor3_code'] = data['actor3'].apply(get_director_index, leest = actor_3_name)
+data['genre_code'] = data['genre'].apply(get_director_index, leest = genre_genre)
 
 print(data.head())
 data.to_csv('text2.csv')
