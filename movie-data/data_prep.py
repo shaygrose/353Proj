@@ -106,6 +106,8 @@ joined['decade'] = (joined['year']//10)*10
 
 #since there are <40 sample points for 1920, 1930, 1940, 1950 and 1960, we grouped them all together into 1920-1960 
 joined['decade'] = joined['decade'].apply(lambda y: y if y >=1970 else "1920-1960")
+joined['genre'] = joined['genre'].str.replace('&',',')
+joined['genre'] = joined['genre'].str.replace(' ', '')
 
 #reorder columns
 joined = joined[['title', 'genre', 'year', 'decade','runtime', 'rating', 'director', 'actor1', 'actor2', 'actor3', 'gross']]
