@@ -10,3 +10,6 @@ Outputs one aggregated csv called all.csv
 To run dataplot:
 python3 dataplot.py all.csv
 outputs 4 .png plots
+
+to run ML.py:
+python3 ML.py all.csv
