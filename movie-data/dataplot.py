@@ -60,24 +60,23 @@ thriller[['title', 'rating', 'decade']] = getGenreAndRating(data, 'Thriller').re
 war[['title', 'rating', 'decade']] = getGenreAndRating(data, 'War').reset_index(drop=True)
 
 averageRating = pd.DataFrame()
-averageRating[['action', 'adventure', 'biography', 'comedy', 'crime', 'drama', 'documentary', 'family', 'fantasy', 'history', 'horror', 'music',
-                'mystery', 'romance', 'sci-Fi', 'thriller', 'war']] = pd.concat([action['rating'], 
-                           adventure['rating'], 
-                           biography['rating'],
-                           comedy['rating'],
-                           crime['rating'],
-                           drama['rating'], 
-                           documentary['rating'],
-                           family['rating'], 
-                           fantasy['rating'],
-                           history['rating'],
-                           horror['rating'],
-                           music['rating'],
-                           mystery['rating'],
-                           romance['rating'],
-                           scifi['rating'],
-                           thriller['rating'],
-                           war['rating']], axis=1, ignore_index=True)
+averageRating[['action', 'adventure', 'biography', 'comedy', 'crime', 'drama', 'documentary', 'family', 'fantasy', 'history', 'horror', 'music', 'mystery', 'romance', 'sci-Fi', 'thriller', 'war']] = pd.concat([action['rating'],
+                                                                               adventure['rating'],
+                                                                               biography['rating'],
+                                                                               comedy['rating'],
+                                                                               crime['rating'],
+                                                                               drama['rating'],
+                                                                               documentary['rating'],
+                                                                               family['rating'],
+                                                                               fantasy['rating'],
+                                                                               history['rating'],
+                                                                               horror['rating'],
+                                                                               music['rating'],
+                                                                               mystery['rating'],
+                                                                               romance['rating'],
+                                                                               scifi['rating'],
+                                                                               thriller['rating'],
+                                                                               war['rating']], axis=1, ignore_index=True)
 
 # print(averageRating.mean())
 
@@ -87,13 +86,16 @@ averageRating.mean().plot.bar(rot=0)
 plt.title('Average Rating by Genre')
 plt.xlabel('Genre')
 plt.ylabel('Average Rating')
+plt.savefig('Average Rating by Genre.png')
 
 #decade rating
+plt.figure(figsize=(20,5))
 decade = data.groupby('decade').agg({'rating':'mean'})
-fig = decade.plot.bar(rot=0)
-fig.set_xlabel('Decade')
-fig.set_ylabel('Average Rating')
-fig.set_title('Decade vs Average Rating')
+decade.plot.bar(rot=0)
+plt.xlabel('Decade')
+plt.ylabel('Average Rating')
+plt.title('Decade vs Average Rating')
+plt.savefig('decade rating.png')
 
 
 def getDirectorRating(d):
@@ -102,27 +104,28 @@ def getDirectorRating(d):
 
 # director vs rating. Directors with at least 10 movies are considered
 director_rating = pd.DataFrame()
-director_rating[['director','count']] = data.groupby('director').size().sort_values().reset_index()
+director_rating[['director','count']] = data.groupby('director').size().reset_index()
 director_rating = director_rating[director_rating['count'] >= 10].reset_index()
 director_rating['rating'] = director_rating['director'].apply(getDirectorRating)
 avg_rating = pd.DataFrame()
 avg_rating[['director', 'rating']] = director_rating[['director', 'rating']]
+avg_rating = avg_rating.sort_values(by = ['rating'], ascending = False)
 fig = plt.figure(figsize=(15,10))
 ax = plt.subplot()
 ax.barh(avg_rating['director'], avg_rating['rating'])
 ax.set_xlabel('Rating')
 ax.set_ylabel('Director')
 ax.set_title('Director vs Rating')
+fig.savefig('director vs rating.png')
 
 #runtime vs. rating
 plt.figure(figsize=(15,5))
 plt.title('Runtime vs Rating')
 plt.ylabel('Rating')
 plt.xlabel('Runtime (minutes)')
-(m,b) = polyfit(runtime, rating, 1)
-yp = polyval([m,b], runtime)
+# (m,b) = polyfit(runtime, rating, 1)
+# yp = polyval([m,b], runtime)
 plt.plot(runtime, rating, '.b', alpha=0.5)
-plt.plot(runtime, yp, '-r', linewidth=2)
+# plt.plot(runtime, yp, '-r', linewidth=2)
 
-plt.show()
-
+plt.savefig('runtime vs rating.png')
