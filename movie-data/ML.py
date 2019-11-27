@@ -1,16 +1,18 @@
-import sys
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from skimage.color import lab2rgb
-from skimage.color import rgb2lab
+import sys
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
-from sklearn.preprocessing import FunctionTransformer, PolynomialFeatures
+from sklearn.preprocessing import FunctionTransformer
 from sklearn.pipeline import make_pipeline
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import VotingClassifier
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import SVC
+from sklearn.preprocessing import StandardScaler
 
 
 data = pd.read_csv(sys.argv[1], index_col = 0)
@@ -21,6 +23,7 @@ actor_1_name = data['actor1'].unique()
 actor_2_name = data['actor2'].unique()
 actor_3_name = data['actor3'].unique()
 genre_genre = data['genre'].unique()
+decade_code = data['decade'].unique()
 
 def get_director_index(x, leest):
     #print(np.where(directors_names == x))
@@ -31,6 +34,7 @@ data['actor1_code'] = data['actor1'].apply(get_director_index, leest = actor_1_n
 data['actor2_code'] = data['actor2'].apply(get_director_index, leest = actor_2_name)
 data['actor3_code'] = data['actor3'].apply(get_director_index, leest = actor_3_name)
 data['genre_code'] = data['genre'].apply(get_director_index, leest = genre_genre)
+data['decade_code'] = data['decade'].apply(get_director_index, leest = decade_code)
 
 #converting runtime to hours and rounding to nearest decimal place
 data['runtime'] = (data['runtime']/60).round(1)
@@ -47,19 +51,39 @@ def score_polyfit(n):
     model.fit(X_train, y_train)
     print('n=%i: score=%.5g' % (n, model.score(X_valid, y_valid)))
 
-X = data[['director code', 'runtime', 'genre_code']]
+X = data[['director code', 'runtime', 'genre_code', 'decade_code']]
 #round each rating to the nearest whole number
 y = data['rating'].round(0)
 X_train, X_valid, y_train, y_valid = train_test_split(X,y,test_size = 0.33, random_state=42)
 
 rand_forest_model = make_pipeline(
         RandomForestClassifier(n_estimators=100,
-        max_depth=10, min_samples_leaf=16)
+        max_depth=8, min_samples_leaf=10)
     )
 
-#throws an error
+voting_model = make_pipeline(
+    StandardScaler(),
+    VotingClassifier([
+    ('nb', GaussianNB()),
+    ('knn', KNeighborsClassifier(10)),
+    ('svm', SVC(kernel='linear', C=2.0)),
+    ('tree1', DecisionTreeClassifier(max_depth=10)),
+    ('tree2', DecisionTreeClassifier(min_samples_leaf=10)),
+    ('tree3', RandomForestClassifier(n_estimators=100, max_depth=10, min_samples_leaf=10)),
+    ])
+)
+
+Boosting_model = GradientBoostingClassifier(n_estimators = 100, max_depth = 3, min_samples_leaf = 5)
+
+
 rand_forest_model.fit(X_train, y_train)
-print(rand_forest_model.score(X_valid, y_valid))
+print(rand_forest_model.score(X_valid, y_valid)) # 0.42461340206185566
+
+voting_model.fit(X_train, y_train)
+print(voting_model.score(X_valid, y_valid)) # 0.3943298969072165
+
+Boosting_model.fit(X_train, y_train)
+print(Boosting_model.score(X_valid, y_valid)) # 0.4220360824742268
 
 #score for just director and genre
 #0.389819587628866
