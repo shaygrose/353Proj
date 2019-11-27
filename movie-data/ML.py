@@ -14,10 +14,12 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC
 from sklearn.preprocessing import StandardScaler
+from sklearn.neural_network import MLPClassifier
 
 
 data = pd.read_csv(sys.argv[1], index_col = 0)
-data.drop(columns = ['index'])
+# print(data.head())
+# data.drop(columns = ['index'])
 
 def random_genre(x):
     return random.choice(x.split(','))
@@ -89,6 +91,10 @@ voting_model = make_pipeline(
 Boosting_model = GradientBoostingClassifier(n_estimators = 100, max_depth = 3, min_samples_leaf = 5)
 
 
+Neural_model = MLPClassifier(solver='lbfgs', hidden_layer_sizes=(2,2), activation='logistic')
+
+
+
 rand_forest_model.fit(X_train, y_train)
 print(rand_forest_model.score(X_valid, y_valid)) # 0.42461340206185566
 
@@ -97,6 +103,9 @@ print(voting_model.score(X_valid, y_valid)) # 0.3943298969072165
 
 Boosting_model.fit(X_train, y_train)
 print(Boosting_model.score(X_valid, y_valid)) # 0.4220360824742268
+
+Neural_model.fit(X_train, y_train)
+print(Neural_model.score(X_valid, y_valid)) # 0.33698453608247425
 
 print('  ')
 print('with random_genre')
@@ -110,6 +119,9 @@ print(voting_model.score(X_valid_2, y_valid_2)) # 0.4117268041237113
 
 Boosting_model.fit(X_train_2, y_train_2)
 print(Boosting_model.score(X_valid_2, y_valid_2)) # 0.41301546391752575
+
+Neural_model.fit(X_train_2, y_train_2)
+print(Neural_model.score(X_valid_2, y_valid_2)) # 0.3389175257731959
 
 #sdlkfasklf
 
