@@ -7,12 +7,12 @@ import matplotlib.pyplot as plt
 data = pd.read_csv(sys.argv[1])
 
 correlate = data.corr(method = 'pearson')
-#print(correlate)
+print(correlate)
 #contingency = [data['']]
 
-print(stats.normaltest(data['rating']).pvalue)
-print(stats.normaltest(data['runtime']).pvalue)
-print(stats.levene(data['rating'], data['runtime']).pvalue)
+print('rating normal test ',stats.normaltest(data['rating']).pvalue)
+print('runtime normal test ',stats.normaltest(data['runtime']).pvalue)
+print('runtime and levene ',stats.levene(data['rating'], data['runtime']).pvalue)
 
 
 decade_1920_1960 = data[data['decade'] == '1920-1960']
@@ -55,7 +55,3 @@ print("1970 - 2000")
 print("1970 - 2010")
 print("1980 - 2000")
 print("1980 - 2010")
-
-
-
-
