@@ -111,7 +111,7 @@ print(voting_model.score(X_valid_2, y_valid_2)) # 0.4117268041237113
 Boosting_model.fit(X_train_2, y_train_2)
 print(Boosting_model.score(X_valid_2, y_valid_2)) # 0.41301546391752575
 
-
+#sdlkfasklf
 
 #score for just director and genre
 #0.389819587628866
