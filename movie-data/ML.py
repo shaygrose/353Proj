@@ -144,20 +144,44 @@ Boosting_model.fit(X_train, y_train)
 Neural_model.fit(X_train, y_train)
 # print("Neural network: ", Neural_model.score(X_valid, y_valid)) # 0.33698453608247425
 
+
+rand_forest_model.fit(X_train_2, y_train_2)
+# print("Random forest classifier: ", rand_forest_model.score(X_valid_2, y_valid_2)) # 0.41365979381443296
+
+voting_model.fit(X_train_2, y_train_2)
+# print("Voting classifier: ", voting_model.score(X_valid_2, y_valid_2)) # 0.4117268041237113
+
+Boosting_model.fit(X_train_2, y_train_2)
+# print("Boosted model: ", Boosting_model.score(X_valid_2, y_valid_2)) # 0.41301546391752575
+
+Neural_model.fit(X_train_2, y_train_2)
+# print("Neural network: ", Neural_model.score(X_valid_2, y_valid_2)) # 0.3389175257731959
+
+
 # scores = pd.DataFrame()
 
 df = pd.DataFrame()
-df['scores'] = pd.Series([rand_forest_model.score(X_valid, y_valid), voting_model.score(X_valid, y_valid), Boosting_model.score(X_valid, y_valid), Neural_model.score(X_valid, y_valid)])
+df['scores1'] = pd.Series([rand_forest_model.score(X_valid, y_valid), voting_model.score(X_valid, y_valid), Boosting_model.score(X_valid, y_valid), Neural_model.score(X_valid, y_valid)])
+
+df['scores2'] = pd.Series([rand_forest_model.score(X_valid_2, y_valid_2), voting_model.score(X_valid_2, y_valid_2), Boosting_model.score(X_valid_2, y_valid_2), Neural_model.score(X_valid_2, y_valid_2)])
 
 df['labels'] = pd.Series(["Random Forest", "Voting Classifier", "Boosted Model", "Neural Network"])
 
-plt.figure(figsize=(20,5))
+fig = plt.figure(figsize=(10,5))
+ax = plt.subplot(111)
 plt.ylim(0.3,0.5)
-plt.xlabel('Model')
-plt.ylabel('Accuracy Score')
-plt.title('Model vs. Accuracy Score')
-plt.bar([1, 2, 3, 4], df['scores'], align = 'center')
-plt.xticks([1,2,3,4], df['labels'])
+one = ax.bar([0.75, 1.75, 2.75, 3.75], df['scores1'], width = 0.25, color = 'b', align = 'center')
+two = ax.bar([1.25, 2.25, 3.25, 4.25], df['scores2'], width = 0.25, color = 'g', align = 'center')
+ax.set_xticks([1,2,3,4])
+ax.set_xticklabels(df['labels'])
+ax.legend([one, two], ['With normal genre', "with random one genre"])
+# plt.xlabel('Model')
+# plt.ylabel('Accuracy Score')
+# plt.title('Model vs. Accuracy Score')
+# plt.bar([1, 2, 3, 4], df['scores1'], align = 'center')
+# plt.xticks([1, 2, 3, 4], df['labels'])
+
+
 plt.savefig('Model vs. scores.png')
 
 
@@ -165,17 +189,7 @@ plt.savefig('Model vs. scores.png')
 # print('Using a single random genre from a movies list of genres\n')
 
 
-# rand_forest_model.fit(X_train_2, y_train_2)
-# print("Random forest classifier: ", rand_forest_model.score(X_valid_2, y_valid_2)) # 0.41365979381443296
 
-# voting_model.fit(X_train_2, y_train_2)
-# print("Voting classifier: ", voting_model.score(X_valid_2, y_valid_2)) # 0.4117268041237113
-
-# Boosting_model.fit(X_train_2, y_train_2)
-# print("Boosted model: ", Boosting_model.score(X_valid_2, y_valid_2)) # 0.41301546391752575
-
-# Neural_model.fit(X_train_2, y_train_2)
-# print("Neural network: ", Neural_model.score(X_valid_2, y_valid_2)) # 0.3389175257731959
 
 
 #score for just director and genre
