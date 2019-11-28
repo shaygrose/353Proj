@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sys
 import random
+#import seaborn
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import FunctionTransformer
@@ -16,6 +17,7 @@ from sklearn.svm import SVC
 from sklearn.preprocessing import StandardScaler
 from sklearn.neural_network import MLPClassifier
 
+#seaborn.set()
 
 data = pd.read_csv(sys.argv[1], index_col = 0)
 # print(data.head())
@@ -34,19 +36,19 @@ genre_genre = data['genre'].unique()
 decade_code = data['decade'].unique()
 genre_codecode = data['genre_one'].unique()
 
-def get_director_index(x, leest):
+def get_unique_index(x, leest):
     #print(np.where(directors_names == x))
     return np.where(leest == x)[0][0]
 
 
 
-data['director code'] = data['director'].apply(get_director_index, leest = directors_names)
-data['actor1_code'] = data['actor1'].apply(get_director_index, leest = actor_1_name)
-data['actor2_code'] = data['actor2'].apply(get_director_index, leest = actor_2_name)
-data['actor3_code'] = data['actor3'].apply(get_director_index, leest = actor_3_name)
-data['genre_code'] = data['genre'].apply(get_director_index, leest = genre_genre)
-data['decade_code'] = data['decade'].apply(get_director_index, leest = decade_code)
-data['genre_one_code'] = data['genre_one'].apply(get_director_index, leest = genre_codecode)
+data['director code'] = data['director'].apply(get_unique_index, leest = directors_names)
+data['actor1_code'] = data['actor1'].apply(get_unique_index, leest = actor_1_name)
+data['actor2_code'] = data['actor2'].apply(get_unique_index, leest = actor_2_name)
+data['actor3_code'] = data['actor3'].apply(get_unique_index, leest = actor_3_name)
+data['genre_code'] = data['genre'].apply(get_unique_index, leest = genre_genre)
+data['decade_code'] = data['decade'].apply(get_unique_index, leest = decade_code)
+data['genre_one_code'] = data['genre_one'].apply(get_unique_index, leest = genre_codecode)
 
 
 #converting runtime to hours and rounding to nearest decimal place
@@ -84,46 +86,100 @@ voting_model = make_pipeline(
     ('svm', SVC(kernel='linear', C=2.0)),
     ('tree1', DecisionTreeClassifier(max_depth=10)),
     ('tree2', DecisionTreeClassifier(min_samples_leaf=10)),
-    ('tree3', RandomForestClassifier(n_estimators=100, max_depth=10, min_samples_leaf=10)),
+    ('tree3', RandomForestClassifier(n_estimators=100, max_depth=8, min_samples_leaf=10)),
     ])
 )
+
+
+def trees(n):
+    tree1 = DecisionTreeClassifier(max_depth=n)
+    tree1.fit(X_train, y_train)
+    y1.append(tree1.score(X_valid, y_valid))
+    #print('n=%i: score=%.5g' % (n, tree1.score(X_valid, y_valid)))
+
+
+    tree2 = RandomForestClassifier(n_estimators=100, max_depth=n, min_samples_leaf=10)
+    tree2.fit(X_train, y_train)
+    y2.append(tree2.score(X_valid, y_valid))
+    #print('n=%i: score=%.5g' % (n, tree2.score(X_valid, y_valid)))
+
+y1=[]
+y2=[]
+n=list(range(5,16))
+
+
+#Used to decide what depth to use for trees
+trees(5)
+trees(6)
+trees(7)
+trees(8) #n = 8 gets the highest score
+trees(9)
+trees(10)
+trees(11)
+trees(12)
+trees(13)
+trees(14)
+trees(15)
+
+plt.title('Depth of Tree vs. Model Accuracy')
+plt.xlabel('Depth (n)')
+plt.ylabel('Accuracy of Model')
+plt.ylim(0, 0.5)
+plt.plot(n, y1)
+plt.plot(n, y2)
+plt.legend(['Decision tree', 'Random forest'],loc='lower right')
+plt.savefig("model_accuracy.png")
+#decision tree
+#random tree classifier
+# n=8: score=0.40206
+# n=8: score=0.42719
+# n=9: score=0.38531
+# n=9: score=0.42075
+# n=10: score=0.38853
+# n=10: score=0.41044
+# n=12: score=0.37371
+# n=12: score=0.41559
+# n=15: score=0.35245
+# n=15: score=0.41302
+# n=20: score=0.33956
+# n=20: score=0.41881
+
 
 Boosting_model = GradientBoostingClassifier(n_estimators = 100, max_depth = 3, min_samples_leaf = 5)
 
 
 Neural_model = MLPClassifier(solver='lbfgs', hidden_layer_sizes=(2,2), activation='logistic')
 
+# print("Using list of genres as unique genres\n")
+
+# rand_forest_model.fit(X_train, y_train)
+# print("Random forest classifier: ", rand_forest_model.score(X_valid, y_valid)) # 0.42461340206185566
+
+# voting_model.fit(X_train, y_train)
+# print("Voting classifier: ", voting_model.score(X_valid, y_valid)) # 0.3943298969072165
+
+# Boosting_model.fit(X_train, y_train)
+# print("Boosted model: ", Boosting_model.score(X_valid, y_valid)) # 0.4220360824742268
+
+# Neural_model.fit(X_train, y_train)
+# print("Neural network: ", Neural_model.score(X_valid, y_valid)) # 0.33698453608247425
+
+# print()
+# print('Using a single random genre from a movies list of genres\n')
 
 
-rand_forest_model.fit(X_train, y_train)
-print(rand_forest_model.score(X_valid, y_valid)) # 0.42461340206185566
+# rand_forest_model.fit(X_train_2, y_train_2)
+# print("Random forest classifier: ", rand_forest_model.score(X_valid_2, y_valid_2)) # 0.41365979381443296
 
-voting_model.fit(X_train, y_train)
-print(voting_model.score(X_valid, y_valid)) # 0.3943298969072165
+# voting_model.fit(X_train_2, y_train_2)
+# print("Voting classifier: ", voting_model.score(X_valid_2, y_valid_2)) # 0.4117268041237113
 
-Boosting_model.fit(X_train, y_train)
-print(Boosting_model.score(X_valid, y_valid)) # 0.4220360824742268
+# Boosting_model.fit(X_train_2, y_train_2)
+# print("Boosted model: ", Boosting_model.score(X_valid_2, y_valid_2)) # 0.41301546391752575
 
-Neural_model.fit(X_train, y_train)
-print(Neural_model.score(X_valid, y_valid)) # 0.33698453608247425
+# Neural_model.fit(X_train_2, y_train_2)
+# print("Neural network: ", Neural_model.score(X_valid_2, y_valid_2)) # 0.3389175257731959
 
-print('  ')
-print('with random_genre')
-print('   ')
-
-rand_forest_model.fit(X_train_2, y_train_2)
-print(rand_forest_model.score(X_valid_2, y_valid_2)) # 0.41365979381443296
-
-voting_model.fit(X_train_2, y_train_2)
-print(voting_model.score(X_valid_2, y_valid_2)) # 0.4117268041237113
-
-Boosting_model.fit(X_train_2, y_train_2)
-print(Boosting_model.score(X_valid_2, y_valid_2)) # 0.41301546391752575
-
-Neural_model.fit(X_train_2, y_train_2)
-print(Neural_model.score(X_valid_2, y_valid_2)) # 0.3389175257731959
-
-#sdlkfasklf
 
 #score for just director and genre
 #0.389819587628866
