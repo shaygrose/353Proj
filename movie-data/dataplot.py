@@ -2,11 +2,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sys
 from scipy import stats
-import seaborn as sns
+#import seaborn as sns
 from pylab import *
 
 data = pd.read_csv(sys.argv[1])
-sns.set()
+#sns.set()
 
 title = data['title']
 director = data['director']

@@ -109,18 +109,10 @@ n=list(range(5,16))
 
 
 #Used to decide what depth to use for trees
-trees(5)
-trees(6)
-trees(7)
-trees(8) #n = 8 gets the highest score
-trees(9)
-trees(10)
-trees(11)
-trees(12)
-trees(13)
-trees(14)
-trees(15)
+for i in range(5,16):
+    trees(i)
 
+plt.figure(figsize=(10,5))
 plt.title('Depth of Tree vs. Model Accuracy')
 plt.xlabel('Depth (n)')
 plt.ylabel('Accuracy of Model')
@@ -129,20 +121,6 @@ plt.plot(n, y1)
 plt.plot(n, y2)
 plt.legend(['Decision tree', 'Random forest'],loc='lower right')
 plt.savefig("model_accuracy.png")
-#decision tree
-#random tree classifier
-# n=8: score=0.40206
-# n=8: score=0.42719
-# n=9: score=0.38531
-# n=9: score=0.42075
-# n=10: score=0.38853
-# n=10: score=0.41044
-# n=12: score=0.37371
-# n=12: score=0.41559
-# n=15: score=0.35245
-# n=15: score=0.41302
-# n=20: score=0.33956
-# n=20: score=0.41881
 
 
 Boosting_model = GradientBoostingClassifier(n_estimators = 100, max_depth = 3, min_samples_leaf = 5)
@@ -152,17 +130,35 @@ Neural_model = MLPClassifier(solver='lbfgs', hidden_layer_sizes=(2,2), activatio
 
 # print("Using list of genres as unique genres\n")
 
-# rand_forest_model.fit(X_train, y_train)
+
+
+rand_forest_model.fit(X_train, y_train)
 # print("Random forest classifier: ", rand_forest_model.score(X_valid, y_valid)) # 0.42461340206185566
 
-# voting_model.fit(X_train, y_train)
+voting_model.fit(X_train, y_train)
 # print("Voting classifier: ", voting_model.score(X_valid, y_valid)) # 0.3943298969072165
 
-# Boosting_model.fit(X_train, y_train)
+Boosting_model.fit(X_train, y_train)
 # print("Boosted model: ", Boosting_model.score(X_valid, y_valid)) # 0.4220360824742268
 
-# Neural_model.fit(X_train, y_train)
+Neural_model.fit(X_train, y_train)
 # print("Neural network: ", Neural_model.score(X_valid, y_valid)) # 0.33698453608247425
+
+# scores = pd.DataFrame()
+
+scores = pd.Series([rand_forest_model.score(X_valid, y_valid), voting_model.score(X_valid, y_valid), Boosting_model.score(X_valid, y_valid), Neural_model.score(X_valid, y_valid)])
+
+labels = ["Random Forest", "Voting Classifier", "Boosted Model", "Neural Network"]
+
+plt.figure(figsize=(20,5))
+plt.ylim(0.3,0.5)
+plt.xlabel('Model')
+#have to fix xtick labels
+#plt.xticks([0,1,2,3], ("Random Forest", "Voting Classifier", "Boosted Model", "Neural Network"))
+plt.ylabel('Accuracy Score')
+plt.title('Model vs. Accuracy Score')
+scores.plot.bar(rot = 1)
+#plt.show()
 
 # print()
 # print('Using a single random genre from a movies list of genres\n')
