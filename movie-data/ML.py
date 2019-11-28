@@ -112,7 +112,7 @@ n=list(range(5,16))
 for i in range(5,16):
     trees(i)
 
-plt.figure(figsize=(10,5))
+fig1 = plt.figure(figsize=(10,5))
 plt.title('Depth of Tree vs. Model Accuracy')
 plt.xlabel('Depth (n)')
 plt.ylabel('Accuracy of Model')
@@ -120,7 +120,7 @@ plt.ylim(0, 0.5)
 plt.plot(n, y1)
 plt.plot(n, y2)
 plt.legend(['Decision tree', 'Random forest'],loc='lower right')
-plt.savefig("model_accuracy.png")
+fig1.savefig("model_accuracy.png")
 
 
 Boosting_model = GradientBoostingClassifier(n_estimators = 100, max_depth = 3, min_samples_leaf = 5)
@@ -146,19 +146,20 @@ Neural_model.fit(X_train, y_train)
 
 # scores = pd.DataFrame()
 
-scores = pd.Series([rand_forest_model.score(X_valid, y_valid), voting_model.score(X_valid, y_valid), Boosting_model.score(X_valid, y_valid), Neural_model.score(X_valid, y_valid)])
+df = pd.DataFrame()
+df['scores'] = pd.Series([rand_forest_model.score(X_valid, y_valid), voting_model.score(X_valid, y_valid), Boosting_model.score(X_valid, y_valid), Neural_model.score(X_valid, y_valid)])
 
-labels = ["Random Forest", "Voting Classifier", "Boosted Model", "Neural Network"]
+df['labels'] = pd.Series(["Random Forest", "Voting Classifier", "Boosted Model", "Neural Network"])
 
 plt.figure(figsize=(20,5))
 plt.ylim(0.3,0.5)
 plt.xlabel('Model')
-#have to fix xtick labels
-#plt.xticks([0,1,2,3], ("Random Forest", "Voting Classifier", "Boosted Model", "Neural Network"))
 plt.ylabel('Accuracy Score')
 plt.title('Model vs. Accuracy Score')
-scores.plot.bar(rot = 1)
-#plt.show()
+plt.bar([1, 2, 3, 4], df['scores'], align = 'center')
+plt.xticks([1,2,3,4], df['labels'])
+plt.savefig('Model vs. scores.png')
+
 
 # print()
 # print('Using a single random genre from a movies list of genres\n')
