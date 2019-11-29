@@ -30,3 +30,8 @@ Finally, we used a few different machine learning methods to try and predict the
 ```
 python3 ML.py all.csv
 ```
+
+Authors:
+shaygrose: Shayna Grose
+pna18/patricksnotstar: Patrick Nguyen
+kchangch: Kidjou Argenis Chang (Big Sus)
