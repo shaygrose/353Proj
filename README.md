@@ -2,6 +2,20 @@
 
 With this project we took five datasets containing various attributes of movies (genre, year, runtime, director, actors etc), and their ratings, and tried to discover if certain characteristics influence how a movie is rated.
 
+**Required Libraries**
+- seaborn 
+- sci-kitlearn  
+- numpy  
+- pandas  
+- matplotlib  
+- scipy  
+- re  
+- pylab  
+- random  
+- sys  
+
+
+
 **Data Preparation**
 
 First we took all the different data sets and extracted common features and converted them into the same units of measure (minutes for the runtime of movies etc.)
