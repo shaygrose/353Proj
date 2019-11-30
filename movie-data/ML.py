@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sys
 import random
-#import seaborn
+import seaborn
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import FunctionTransformer
@@ -17,7 +17,7 @@ from sklearn.svm import SVC
 from sklearn.preprocessing import StandardScaler
 from sklearn.neural_network import MLPClassifier
 
-#seaborn.set()
+seaborn.set()
 
 data = pd.read_csv(sys.argv[1], index_col = 0)
 # print(data.head())
@@ -78,6 +78,11 @@ rand_forest_model = make_pipeline(
         max_depth=8, min_samples_leaf=10)
     )
 
+rand_forest_model2 = make_pipeline(
+        RandomForestClassifier(n_estimators=100,
+        max_depth=8, min_samples_leaf=10)
+    )
+
 voting_model = make_pipeline(
     StandardScaler(),
     VotingClassifier([
@@ -89,6 +94,19 @@ voting_model = make_pipeline(
     ('tree3', RandomForestClassifier(n_estimators=100, max_depth=8, min_samples_leaf=10)),
     ])
 )
+
+voting_model2 = make_pipeline(
+    StandardScaler(),
+    VotingClassifier([
+    ('nb', GaussianNB()),
+    ('knn', KNeighborsClassifier(10)),
+    ('svm', SVC(kernel='linear', C=2.0)),
+    ('tree1', DecisionTreeClassifier(max_depth=10)),
+    ('tree2', DecisionTreeClassifier(min_samples_leaf=10)),
+    ('tree3', RandomForestClassifier(n_estimators=100, max_depth=8, min_samples_leaf=10)),
+    ])
+)
+
 
 
 def trees(n):
@@ -131,6 +149,13 @@ Neural_model = MLPClassifier(solver='lbfgs', hidden_layer_sizes=(2,2), activatio
 # print("Using list of genres as unique genres\n")
 
 
+Boosting_model2 = GradientBoostingClassifier(n_estimators = 100, max_depth = 3, min_samples_leaf = 5)
+
+
+Neural_model2 = MLPClassifier(solver='lbfgs', hidden_layer_sizes=(2,2), activation='logistic')
+
+
+
 
 rand_forest_model.fit(X_train, y_train)
 # print("Random forest classifier: ", rand_forest_model.score(X_valid, y_valid)) # 0.42461340206185566
@@ -145,36 +170,41 @@ Neural_model.fit(X_train, y_train)
 # print("Neural network: ", Neural_model.score(X_valid, y_valid)) # 0.33698453608247425
 
 
-rand_forest_model.fit(X_train_2, y_train_2)
+rand_forest_model2.fit(X_train_2, y_train_2)
 # print("Random forest classifier: ", rand_forest_model.score(X_valid_2, y_valid_2)) # 0.41365979381443296
 
-voting_model.fit(X_train_2, y_train_2)
+voting_model2.fit(X_train_2, y_train_2)
 # print("Voting classifier: ", voting_model.score(X_valid_2, y_valid_2)) # 0.4117268041237113
 
-Boosting_model.fit(X_train_2, y_train_2)
+Boosting_model2.fit(X_train_2, y_train_2)
 # print("Boosted model: ", Boosting_model.score(X_valid_2, y_valid_2)) # 0.41301546391752575
 
-Neural_model.fit(X_train_2, y_train_2)
+Neural_model2.fit(X_train_2, y_train_2)
 # print("Neural network: ", Neural_model.score(X_valid_2, y_valid_2)) # 0.3389175257731959
 
+tree = DecisionTreeClassifier(max_depth=6)
+tree.fit(X_train, y_train)
+
+tree2 = DecisionTreeClassifier(max_depth=6)
+tree2.fit(X_train_2, y_train_2)
 
 # scores = pd.DataFrame()
 
 df = pd.DataFrame()
-df['scores1'] = pd.Series([rand_forest_model.score(X_valid, y_valid), voting_model.score(X_valid, y_valid), Boosting_model.score(X_valid, y_valid), Neural_model.score(X_valid, y_valid)])
+df['scores1'] = pd.Series([rand_forest_model.score(X_valid, y_valid), voting_model.score(X_valid, y_valid), Boosting_model.score(X_valid, y_valid), Neural_model.score(X_valid, y_valid), tree.score(X_valid, y_valid)])
 
-df['scores2'] = pd.Series([rand_forest_model.score(X_valid_2, y_valid_2), voting_model.score(X_valid_2, y_valid_2), Boosting_model.score(X_valid_2, y_valid_2), Neural_model.score(X_valid_2, y_valid_2)])
+df['scores2'] = pd.Series([rand_forest_model2.score(X_valid_2, y_valid_2), voting_model2.score(X_valid_2, y_valid_2), Boosting_model2.score(X_valid_2, y_valid_2), Neural_model2.score(X_valid_2, y_valid_2), tree2.score(X_valid_2, y_valid_2)])
 
-df['labels'] = pd.Series(["Random Forest", "Voting Classifier", "Boosted Model", "Neural Network"])
+df['labels'] = pd.Series(["Random Forest", "Voting Classifier", "Boosted Model", "Neural Network", "Decision Tree"])
 
-fig = plt.figure(figsize=(10,5))
+fig = plt.figure(figsize=(10,6))
 ax = plt.subplot(111)
 plt.ylim(0.3,0.5)
-one = ax.bar([0.75, 1.75, 2.75, 3.75], df['scores1'], width = 0.25, color = 'b', align = 'center')
-two = ax.bar([1.25, 2.25, 3.25, 4.25], df['scores2'], width = 0.25, color = 'g', align = 'center')
-ax.set_xticks([1,2,3,4])
+one = ax.bar([0.75, 1.75, 2.75, 3.75, 4.75], df['scores1'], width = 0.25, color = 'b', align = 'center')
+two = ax.bar([1.25, 2.25, 3.25, 4.25, 5.25], df['scores2'], width = 0.25, color = 'g', align = 'center')
+ax.set_xticks([1,2,3,4, 5])
 ax.set_xticklabels(df['labels'])
-ax.legend([one, two], ['With normal genre', "with random one genre"])
+ax.legend([one, two], ['With list of genres', "with a single random genre"])
 # plt.xlabel('Model')
 # plt.ylabel('Accuracy Score')
 # plt.title('Model vs. Accuracy Score')
