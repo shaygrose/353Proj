@@ -45,7 +45,10 @@ Finally, we used a few different machine learning methods to try and predict the
 python3 ML.py all.csv
 ```
 
+**Link to Final Report:**
+[Movie Success Analysis](https://docs.google.com/document/d/1vxJ0wnO1AckYkosPhDW7AXJrCXsT_ietw3oz_nskwE0/edit?usp=sharing)
+
 **Authors:**  
 shaygrose: Shayna Grose  
 pna18/patricksnotstar: Patrick Nguyen  
-kchangch: Kidjou Argenis Chang (Big Sus)  
+kchangch: Kidjou Argenis Chang 
